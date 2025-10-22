@@ -50,8 +50,8 @@
         }
 
         nav a:hover {
-            color: #6b9bd1;
-            background: rgba(107, 155, 209, 0.08);
+            color: #1a9b95;
+            background: rgba(26, 155, 149, 0.08);
         }
 
         /* Sections */
@@ -71,15 +71,27 @@
 
         /* Hero Section */
         #hero {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e8f4f8 100%);
+            background: linear-gradient(135deg, #f0fffe 0%, #e0f7f6 100%);
             text-align: center;
+        }
+
+        #hero .logo {
+            width: 180px;
+            height: 180px;
+            margin-bottom: 1.5rem;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         #hero h1 {
             font-size: 4rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            color: #6b9bd1;
+            color: #1a9b95;
             letter-spacing: -1px;
         }
 
@@ -94,20 +106,20 @@
         #hero .cta {
             display: inline-block;
             padding: 1rem 2.5rem;
-            background: #6b9bd1;
+            background: #1a9b95;
             color: white;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(107, 155, 209, 0.3);
+            box-shadow: 0 4px 15px rgba(26, 155, 149, 0.3);
         }
 
         #hero .cta:hover {
-            background: #5a8bc0;
+            background: #158882;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(107, 155, 209, 0.4);
+            box-shadow: 0 6px 20px rgba(26, 155, 149, 0.4);
         }
 
         /* Scroll indicator */
@@ -123,7 +135,7 @@
         .scroll-indicator::after {
             content: '↓';
             font-size: 2rem;
-            color: #6b9bd1;
+            color: #1a9b95;
         }
 
         @keyframes bounce {
@@ -165,7 +177,7 @@
         #solution h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            color: #6b9bd1;
+            color: #1a9b95;
             text-align: center;
         }
 
@@ -191,15 +203,18 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2.5rem;
             margin-top: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .feature {
             text-align: center;
             padding: 2rem;
-            background: #f8fbfd;
+            background: #f0fffe;
             border-radius: 12px;
             transition: transform 0.3s ease;
         }
@@ -227,7 +242,7 @@
 
         /* Contact Section */
         #contact {
-            background: linear-gradient(135deg, #6b9bd1 0%, #8ab8db 100%);
+            background: linear-gradient(135deg, #1a9b95 0%, #2cb5ad 100%);
             color: white;
             text-align: center;
         }
@@ -261,6 +276,11 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            #hero .logo {
+                width: 140px;
+                height: 140px;
+            }
+
             #hero h1 {
                 font-size: 2.5rem;
             }
@@ -292,6 +312,7 @@
             }
 
             .features-grid {
+                grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
         }
@@ -312,6 +333,7 @@
     <!-- Hero Section -->
     <section id="hero">
         <div class="section-content">
+            <img src="logo.png" alt="Duschbaby Logo" class="logo">
             <h1>Duschbaby</h1>
             <p class="tagline">Entspanntes Duschen für Mutter & Kind</p>
             <a href="#solution" class="cta">Mehr erfahren</a>
