@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuschBaby - Dein Kind sicher duschen</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- Meta Tags für SEO -->
+    <meta name="description" content="DuschBaby - Die sichere Lösung zum Duschen mit deinem Baby. Kein Rutschen, kein Glitschen mehr. Von Müttern für Mütter entwickelt.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            overflow-x: hidden;
+        }
+
+        /* Fixed Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        nav .logo-small {
+            height: 40px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2d3748;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+        }
+
+        nav a:hover {
+            color: #1a9b95;
+            background: rgba(26, 155, 149, 0.08);
+        }
+
+        nav .cta-nav {
+            background: #1a9b95;
+            color: white !important;
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        nav .cta-nav:hover {
+            background: #158882;
+            color: white !important;
+        }
+
+        /* Sections */
+        section {
+            min-height: 100vh;
+            padding: 8rem 2rem 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-content {
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        /* Hero Section mit Foto */
+        #hero {
+            background: linear-gradient(135deg, #f0fffe 0%, #e0f7f6 100%);
+            position: relative;
+            padding: 6rem 2rem 4rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1a9b95;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.5rem;
+            color: #5a6c7d;
+            font-weight: 400;
+            margin-bottom: 2.5rem;
+            line-height: 1.4;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #1a9b95;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(26, 155, 149, 0.3);
+        }
+
+        .cta:hover {
+            background: #158882;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 155, 149, 0.4);
+        }
+
+        .cta-secondary {
+            background: white;
+            color: #1a9b95;
+            border: 2px solid #1a9b95;
+        }
+
+        .cta-secondary:hover {
+            background: #f0fffe;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            object-fit: cover;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            align-items: center;
+            opacity: 0.8;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #5a6c7d;
+        }
+
+        .trust-badge::before {
+            content: '✓';
+            color: #1a9b95;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Problem Section */
+        #problem {
+            background: white;
+        }
+
+        #problem h2 {
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            color: #2d3748;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .problem-card {
+            background: #fff5f5;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #fc8181;
+        }
+
+        .problem-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #c53030;
+        }
+
+        .problem-card p {
+            color: #5a6c7d;
+            line-height: 1.7;
+        }
+
+        /* Video Section */
+        #video {
+            background: #f7fafc;
+        }
+
+        #video h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            color: #2d3748;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video-description {
+            text-align: center;
+            max-width: 700px;
+            margin: 2rem auto 0;
+            font-size: 1.2rem;
+            color: #5a6c7d;
+            line-height: 1.8;
+        }
+
+        /* Solution Section */
+        #solution {
+            background: linear-gradient(135deg, #f0fffe 0%, #e0f7f6 100%);
+        }
+
+        #solution h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            color: #1a9b95;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .solution-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .solution-content p {
+            font-size: 1.3rem;
+            color: #5a6c7d;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .solution-highlight {
+            background: white;
+            padding: 2.5rem 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .solution-highlight h3 {
+            font-size: 1.8rem;
+            color: #1a9b95;
+            margin-bottom: 1rem;
+        }
+
+        /* Features Section */
+        #features {
+            background: white;
+        }
+
+        #features h2 {
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            color: #2d3748;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature {
+            background: #f0fffe;
+            padding: 2.5rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            border-color: #1a9b95;
+            box-shadow: 0 10px 30px rgba(26, 155, 149, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .feature p {
+            font-size: 1.05rem;
+            color: #5a6c7d;
+            line-height: 1.7;
+        }
+
+        /* Story Section */
+        #story {
+            background: #f7fafc;
+        }
+
+        #story h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            color: #2d3748;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .story-content p {
+            font-size: 1.2rem;
+            color: #5a6c7d;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .story-quote {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            border-left: 4px solid #1a9b95;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #2d3748;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, #1a9b95 0%, #2cb5ad 100%);
+            color: white;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        #contact p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 2rem 3rem;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 2rem;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.3rem;
+            display: block;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            transform: scale(1.05);
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.2rem;
+            }
+
+            .problem-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 2.2rem !important;
+            }
+
+            nav .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            section {
+                padding: 5rem 1.5rem 3rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <img src="logo.png" alt="DuschBaby" class="logo-small">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#video">Produkt</a></li>
+                <li><a href="#features">Vorteile</a></li>
+                <li><a href="#story">Über uns</a></li>
+                <li><a href="#contact" class="cta-nav">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-grid">
+            <div class="hero-content fade-in-up">
+                <h1>Sicher duschen mit deinem Baby</h1>
+                <p class="tagline">Nie wieder Angst vor rutschigen Händen – DuschBaby gibt dir den sicheren Halt, den du brauchst.</p>
+                
+                <div class="hero-cta-group">
+                    <a href="#video" class="cta">Produkt ansehen</a>
+                    <a href="#contact" class="cta cta-secondary">Jetzt anfragen</a>
+                </div>
+
+                <div class="trust-badges">
+                    <div class="trust-badge">Von Müttern entwickelt</div>
+                    <div class="trust-badge">Sicher & Geprüft</div>
+                    <div class="trust-badge">Made in Germany</div>
+                </div>
+            </div>
+            
+            <div class="hero-image fade-in-up">
+                <img src="produkt.jpg" alt="Mutter mit Baby beim Duschen mit DuschBaby">
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem">
+        <div class="section-content">
+            <h2>Das Problem kennen alle Eltern</h2>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>😰 Angst vor dem Rutschen</h3>
+                    <p>Durch Seife und Wasser wird dein Baby glitschig und rutschig – die ständige Angst, dass es dir aus den Händen gleitet, ist real.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>💔 Stress statt Entspannung</h3>
+                    <p>Die Dusche sollte ein schöner Moment sein, wird aber zur Belastung. Viele Eltern verzichten komplett darauf.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>🚫 Keine guten Lösungen</h3>
+                    <p>Bisherige Alternativen sind unpraktisch, teuer oder funktionieren nicht wirklich. Eltern brauchen eine echte Lösung.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+        <div class="section-content">
+            <h2>So funktioniert DuschBaby</h2>
+            
+            <div class="video-container">
+                <video controls poster="produkt.jpg">
+                    <source src="demo.mp4" type="video/mp4">
+                    Dein Browser unterstützt keine Videos.
+                </video>
+            </div>
+            
+            <p class="video-description">
+                Sieh dir an, wie einfach und sicher das Duschen mit DuschBaby funktioniert. 
+                Kein Rutschen, kein Stress – nur entspannte Momente mit deinem Baby.
+            </p>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution">
+        <div class="section-content">
+            <div class="solution-content">
+                <h2>Die Lösung: DuschBaby</h2>
+                <p>DuschBaby gibt dir die Sicherheit, die du brauchst, um dein Kind entspannt zu duschen – kein Rutschen, kein Glitschen mehr.</p>
+                
+                <div class="solution-highlight">
+                    <h3>🎯 Anti-Rutsch-Technologie</h3>
+                    <p>Mit DuschBaby hast du dein Baby sicher im Griff, auch wenn es nass und seifig ist. Die spezielle Anti-Rutsch-Oberfläche sorgt für perfekten Halt.</p>
+                </div>
+                
+                <p>Entwickelt von Müttern für Mütter – weil wir genau verstehen, was du brauchst. Endlich kannst du die gemeinsame Duschzeit mit deinem Baby genießen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="section-content">
+            <h2>Warum DuschBaby?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Absolut sicher</h3>
+                    <p>Anti-Rutsch-Design gibt dir sicheren Halt – dein Baby kann nicht mehr aus der Hand gleiten. Geprüft und zertifiziert.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💙</div>
+                    <h3>Komfortabel</h3>
+                    <p>Ergonomisches Design für maximalen Komfort von Mutter und Kind. Angenehmes Material, das sich gut anfühlt.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✨</div>
+                    <h3>Kinderleicht</h3>
+                    <p>Einfache Anwendung – einfach anlegen und schon kannst du sicher duschen. Keine komplizierte Installation nötig.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌊</div>
+                    <h3>100% Wasserfest</h3>
+                    <p>Speziell für den Einsatz in der Dusche entwickelt und getestet. Langlebiges, pflegeleichtes Material.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story">
+        <div class="section-content">
+            <div class="story-content">
+                <h2>Unsere Geschichte</h2>
+                <p>DuschBaby wurde aus eigener Erfahrung geboren. Als Mutter kenne ich die Herausforderungen und Ängste beim Duschen mit dem Baby nur zu gut.</p>
+                
+                <div class="story-quote">
+                    "Nach unzähligen stressigen Duschmomenten wusste ich: Es muss eine bessere Lösung geben. Also habe ich sie selbst entwickelt."
+                </div>
+                
+                <p>Was als persönliche Lösung begann, ist heute ein Produkt, das Eltern mehr Sicherheit und Entspannung schenkt.</p>
+                <p><strong>Von Müttern entwickelt. Für alle Eltern gemacht.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-content">
+            <h2>Bereit für entspannte Duschmomente?</h2>
+            <p>Kontaktiere uns für weitere Informationen oder Vorbestellungen.</p>
+            
+            <div class="contact-info">
+                <a href="mailto:kontakt@duschbaby.de">📧 kontakt@duschbaby.de</a>
+            </div>
+            
+            <div style="margin-top: 3rem;">
+                <a href="#hero" class="cta cta-secondary" style="background: white; color: #1a9b95;">Zurück nach oben</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
