@@ -50,8 +50,14 @@
         }
 
         nav .logo-small {
-            height: 40px;
+            height: 50px;
             width: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        nav .logo-small:hover {
+            transform: scale(1.05);
         }
 
         nav ul {
@@ -469,6 +475,10 @@
 
         /* Responsive */
         @media (max-width: 968px) {
+            nav .logo-small {
+                height: 45px;
+            }
+
             #hero {
                 padding-top: 4.5rem;
                 padding-bottom: 3rem;
@@ -547,7 +557,9 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <img src="logo.png" alt="DuschBaby" class="logo-small">
+            <a href="#hero">
+                <img src="logo.png" alt="DuschBaby" class="logo-small">
+            </a>
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#problem">Problem</a></li>
