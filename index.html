@@ -110,6 +110,7 @@
             background: linear-gradient(135deg, #f0fffe 0%, #e0f7f6 100%);
             position: relative;
             padding: 6rem 2rem 4rem;
+            padding-top: 5rem;
         }
 
         .hero-grid {
@@ -468,9 +469,14 @@
 
         /* Responsive */
         @media (max-width: 968px) {
+            #hero {
+                padding-top: 4.5rem;
+                padding-bottom: 3rem;
+            }
+
             .hero-grid {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+                gap: 2rem;
             }
 
             .hero-content h1 {
@@ -526,6 +532,16 @@
             animation: fadeInUp 0.8s ease-out;
         }
     </style>
+    
+    <script>
+        // Stelle sicher, dass die Seite beim Laden oben ist
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        }
+        window.addEventListener('beforeunload', function () {
+            window.scrollTo(0, 0);
+        });
+    </script>
 </head>
 <body>
     <!-- Navigation -->
