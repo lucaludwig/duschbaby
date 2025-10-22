@@ -14,6 +14,11 @@
     <!-- Meta Tags für SEO -->
     <meta name="description" content="DuschBaby - Die sichere Lösung zum Duschen mit deinem Baby. Kein Rutschen, kein Glitschen mehr. Von Müttern für Mütter entwickelt.">
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -22,7 +27,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #2d3748;
             overflow-x: hidden;
@@ -129,18 +134,20 @@
         }
 
         .hero-content h1 {
+            font-family: 'Quicksand', sans-serif;
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
             color: #1a9b95;
-            letter-spacing: -1px;
+            letter-spacing: -0.5px;
             line-height: 1.1;
         }
 
         .hero-content .tagline {
+            font-family: 'Inter', sans-serif;
             font-size: 1.5rem;
             color: #5a6c7d;
-            font-weight: 400;
+            font-weight: 300;
             margin-bottom: 2.5rem;
             line-height: 1.4;
         }
@@ -224,6 +231,7 @@
         }
 
         #problem h2 {
+            font-family: 'Quicksand', sans-serif;
             font-size: 2.8rem;
             margin-bottom: 3rem;
             color: #2d3748;
@@ -246,9 +254,11 @@
         }
 
         .problem-card h3 {
+            font-family: 'Quicksand', sans-serif;
             font-size: 1.3rem;
             margin-bottom: 1rem;
             color: #c53030;
+            font-weight: 600;
         }
 
         .problem-card p {
@@ -284,12 +294,14 @@
         }
 
         .video-description {
+            font-family: 'Inter', sans-serif;
             text-align: center;
             max-width: 700px;
             margin: 2rem auto 0;
             font-size: 1.2rem;
             color: #5a6c7d;
             line-height: 1.8;
+            font-weight: 300;
         }
 
         /* Solution Section */
@@ -327,9 +339,11 @@
         }
 
         .solution-highlight h3 {
+            font-family: 'Quicksand', sans-serif;
             font-size: 1.8rem;
             color: #1a9b95;
             margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         /* Features Section */
@@ -375,9 +389,11 @@
         }
 
         .feature h3 {
+            font-family: 'Quicksand', sans-serif;
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: #2d3748;
+            font-weight: 600;
         }
 
         .feature p {
@@ -413,15 +429,38 @@
         }
 
         .story-quote {
+            font-family: 'Playfair Display', serif;
             background: white;
             padding: 2.5rem;
             border-radius: 15px;
             margin: 3rem 0;
             border-left: 4px solid #1a9b95;
             font-style: italic;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: #2d3748;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .story-quote::before {
+            content: '"';
+            font-size: 3rem;
+            color: #1a9b95;
+            opacity: 0.3;
+            position: relative;
+            top: 10px;
+            margin-right: 5px;
+        }
+
+        .story-quote::after {
+            content: '"';
+            font-size: 3rem;
+            color: #1a9b95;
+            opacity: 0.3;
+            position: relative;
+            top: 10px;
+            margin-left: 5px;
         }
 
         /* Contact Section */
@@ -471,6 +510,11 @@
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
+        }
+
+        /* Überschriften Schriften */
+        h1, h2, h3 {
+            font-family: 'Quicksand', sans-serif;
         }
 
         /* Responsive */
