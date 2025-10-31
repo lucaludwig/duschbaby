@@ -26,11 +26,19 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #2d3748;
             overflow-x: hidden;
+            position: relative;
+            width: 100%;
+            -webkit-overflow-scrolling: touch;
         }
 
         /* Fixed Navigation */
@@ -543,10 +551,6 @@
             transform: scale(1.05);
         }
 
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
 
         /* Überschriften Schriften */
         h1, h2, h3 {
@@ -576,13 +580,18 @@
 
         /* Responsive */
         @media (max-width: 968px) {
+            html {
+                scroll-padding-top: 120px;
+            }
+
             nav .logo-small {
                 height: 50px;
             }
 
             #hero {
-                padding-top: 6rem;
+                padding-top: 8rem;
                 padding-bottom: 3rem;
+                min-height: 100vh;
             }
 
             .hero-grid {
@@ -635,10 +644,6 @@
             section {
                 padding: 3.5rem 1.5rem;
                 min-height: auto;
-            }
-
-            #hero {
-                padding-top: 5.5rem !important;
             }
 
             .feature {
@@ -752,18 +757,12 @@
         <div class="section-content">
             <h2>Das Problem</h2>
 
-            <div style="max-width: 850px; margin: 0 auto; text-align: center;">
-                <p style="font-size: 1.2rem; color: #5a6c7d; line-height: 1.8; margin-bottom: 1.5rem;">
-                    <strong style="color: #2d3748;">Nasse Haut, glitschige Arme.</strong> Jeder Elternteil kennt das unsichere Gefühl beim Duschen mit dem Baby. DuschBaby wurde genau dafür entwickelt:
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.3rem; color: #2d3748; line-height: 1.8; margin-bottom: 2rem; font-weight: 500;">
+                    Nasse Haut, glitschige Arme – jedes Elternteil kennt das unsichere Gefühl beim Duschen mit dem Baby.
                 </p>
                 <p style="font-size: 1.15rem; color: #5a6c7d; line-height: 1.8; margin-bottom: 1.5rem;">
-                    Ein spezieller, rutschfester Handschuh, der festen Halt bietet, ohne dabei die Haut deines Babys zu reizen.
-                </p>
-                <p style="font-size: 1.15rem; color: #5a6c7d; line-height: 1.8; margin-bottom: 1.5rem;">
-                    So kannst du dich voll und ganz auf das Schönste konzentrieren – das gemeinsame Duscherlebnis mit deinem Baby. Ob nach dem Strandtag, beim Babyschwimmen oder einfach in der heimischen Dusche.
-                </p>
-                <p style="font-size: 1.25rem; color: #1a9b95; font-weight: 600; margin-top: 1.5rem;">
-                    Weil Sicherheit an erster Stelle steht!
+                    Egal ob nach dem Strandtag, beim Babyschwimmen oder zuhause: <strong style="color: #1a9b95;">DuschBaby gibt dir den sicheren Halt</strong>, den du brauchst – für entspannte Momente mit deinem Kind.
                 </p>
             </div>
         </div>
@@ -774,15 +773,15 @@
         <div class="section-content">
             <h2>Das Produkt</h2>
 
-            <div style="max-width: 700px; margin: 0 auto 2.5rem;">
+            <div style="max-width: 700px; margin: 0 auto 2rem;">
                 <img src="produkt-shot-1.jpeg" alt="DuschBaby Duschhandschuh mit Nassbeutel" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
             </div>
 
-            <p style="text-align: center; font-size: 1.2rem; color: #5a6c7d; line-height: 1.8; max-width: 700px; margin: 0 auto 3rem;">
-                Der <strong style="color: #1a9b95;">DuschBaby Handschuh</strong> mit praktischem Nassbeutel – dein zuverlässiger Begleiter für sichere Duschmomente mit deinem Baby.
+            <p style="text-align: center; font-size: 1.2rem; color: #5a6c7d; line-height: 1.8; max-width: 650px; margin: 0 auto 4rem;">
+                Der <strong style="color: #1a9b95;">DuschBaby Handschuh</strong> mit praktischem Nassbeutel – dein zuverlässiger Begleiter für sichere Duschmomente.
             </p>
 
-            <h3 style="font-family: 'Quicksand', sans-serif; font-size: 2.2rem; color: #2d3748; text-align: center; margin-bottom: 1.5rem; font-weight: 700;">So funktioniert's</h3>
+            <h3 style="font-family: 'Quicksand', sans-serif; font-size: 2rem; color: #2d3748; text-align: center; margin-bottom: 1.5rem; font-weight: 700;">So funktioniert's</h3>
 
             <div class="video-container">
                 <video autoplay loop muted playsinline poster="produkt.jpg">
@@ -792,7 +791,6 @@
             </div>
 
             <p class="video-description">
-                Sieh dir an, wie einfach und sicher das Duschen mit DuschBaby funktioniert.<br>
                 <strong>Kein Rutschen, kein Stress</strong> – nur entspannte Momente mit deinem Baby.
             </p>
         </div>
@@ -804,21 +802,13 @@
             <div class="solution-content">
                 <h2>Die Lösung</h2>
 
-                <p style="font-size: 1.25rem; margin-bottom: 2rem; line-height: 1.8;">
-                    Mit DuschBaby hast du dein Baby <strong style="color: #1a9b95;">immer sicher im Griff</strong>. Egal, ob zuhause, im Urlaub oder nach dem Babyschwimmen.
-                </p>
-
                 <div class="solution-highlight">
-                    <h3>Der innovative Duschhandschuh</h3>
-                    <p style="font-size: 1.15rem; line-height: 1.8;">Der innovative Duschhandschuh sorgt dafür, dass dein kleiner Schatz beim Duschen nicht aus den Armen gleitet.</p>
+                    <h3>Sicherer Halt durch innovatives Design</h3>
+                    <p style="font-size: 1.15rem; line-height: 1.8;">Rutschfest, hautfreundlich und schnell trocknend – DuschBaby sorgt für entspannte Duschmomente mit deinem Baby.</p>
                 </div>
 
-                <p style="font-size: 1.2rem; margin-bottom: 1.5rem; line-height: 1.8;">
-                    Für unbeschwerte, liebevolle Momente voller Vertrauen und Nähe.
-                </p>
-
-                <p style="font-size: 1.15rem; color: #5a6c7d; line-height: 1.8;">
-                    Das hochwertige, schnell trocknende Material ist sanft zur Haut und begleitet euch überall hin.
+                <p style="font-size: 1.15rem; color: #5a6c7d; line-height: 1.8; margin-top: 2rem;">
+                    Egal ob zuhause, im Urlaub oder nach dem Babyschwimmen – dein verlässlicher Begleiter für unbeschwerte Momente voller Vertrauen und Nähe.
                 </p>
             </div>
         </div>
@@ -828,38 +818,37 @@
     <section id="features">
         <div class="section-content">
             <h2>Warum DuschBaby?</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #5a6c7d; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">Ein Handschuh, der den Unterschied macht:</p>
 
             <div class="features-grid">
                 <div class="feature">
                     <div class="feature-icon">🛡️</div>
-                    <h3>Rutschfest und hautfreundlich</h3>
-                    <p>Rutschfest und hautfreundlich für maximale Sicherheit. Die spezielle Oberfläche gibt dir perfekten Halt, während das Material sanft zur empfindlichen Babyhaut bleibt.</p>
+                    <h3>Rutschfest & sicher</h3>
+                    <p>Perfekter Halt bei nasser Haut – sanft zur empfindlichen Babyhaut.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">✋</div>
-                    <h3>Passt sich jeder Handgröße an</h3>
-                    <p>Universelles Design passt sich jeder Handgröße an – egal ob Papa, Mama oder andere Betreuungspersonen den DuschBaby verwenden.</p>
+                    <h3>Universelle Passform</h3>
+                    <p>Passt sich jeder Handgröße an – für Mama, Papa und alle Betreuungspersonen.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">💙</div>
-                    <h3>Ergonomisches Design</h3>
-                    <p>Ergonomisches Design für maximalen Komfort von Mutter und Kind. Angenehmes Material, das sich natürlich anfühlt.</p>
+                    <h3>Ergonomisch</h3>
+                    <p>Komfortables Design für natürliches, sicheres Handling.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">💨</div>
                     <h3>Schnell trocknend</h3>
-                    <p>Schnell trocknend und hygienisch. Das spezielle Material trocknet rasch und ist leicht zu reinigen – perfekt für unterwegs.</p>
+                    <p>Hygienisches Material – leicht zu reinigen und ideal für unterwegs.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">👶</div>
-                    <h3>Für Neugeborene bis 24 Monate</h3>
-                    <p>Ideal für Neugeborene und Babys bis ca. 24 Monate. Wächst mit deinem Baby mit und begleitet euch durch die erste wichtige Zeit.</p>
+                    <h3>0-24 Monate</h3>
+                    <p>Begleitet dich und dein Baby durch die ersten wichtigen Jahre.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">🎒</div>
-                    <h3>Inkl. Nassbeutel</h3>
-                    <p>Inkl. Nassbeutel für hygienische Aufbewahrung. Perfekt für Urlaub, Schwimmbad oder den Transport in der Wickeltasche.</p>
+                    <h3>Mit Nassbeutel</h3>
+                    <p>Hygienische Aufbewahrung für Urlaub, Schwimmbad oder Wickeltasche.</p>
                 </div>
             </div>
         </div>
@@ -876,39 +865,34 @@
                     <img src="founder.jpeg" alt="Giulia und Lena - Die Gründerinnen von DuschBaby" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
                 </div>
                 <div>
-                    <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                        Wir sind <strong style="color: #1a9b95;">Giulia und Lena</strong> – zwei Mamis, die das Leben lieben, das Reisen genießen und wissen, dass Elternsein oft bedeutet, kreative Lösungen zu finden.
+                    <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                        Wir sind <strong style="color: #1a9b95;">Giulia und Lena</strong> – zwei Mütter, die aus eigener Erfahrung wissen, wie herausfordernd der Alltag mit Baby sein kann.
                     </p>
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #5a6c7d; margin-bottom: 0;">
-                        Aus eigener Erfahrung wissen wir, wie herausfordernd der Alltag mit Baby sein kann. Deshalb haben wir DuschBaby entwickelt – eine Lösung, die wirklich funktioniert.
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #5a6c7d;">
+                        Deshalb haben wir DuschBaby entwickelt – eine praktische Lösung für ein alltägliches Problem.
                     </p>
                 </div>
             </div>
 
             <!-- Story Content -->
             <div class="story-content">
-                <div style="max-width: 800px; margin: 0 auto;">
+                <div style="max-width: 750px; margin: 0 auto;">
 
-                    <h3 style="font-family: 'Quicksand', sans-serif; font-size: 1.5rem; color: #2d3748; margin-bottom: 1rem; font-weight: 600;">Das Problem</h3>
-                    <p style="line-height: 1.8; margin-bottom: 2.5rem;">
-                        Giulias Sohn leidet unter Neurodermitis. Für ihn ist es besonders wichtig, nach dem Baden im Chlor- oder Salzwasser gründlich abgeduscht zu werden. Doch jedes Mal stellte sich dieselbe Frage: <em>„Wie kann ich mein Kind sicher und bequem in der Dusche abbrausen, ohne Angst zu haben, dass etwas passiert?"</em>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #5a6c7d;">
+                        Giulias Sohn leidet unter Neurodermitis und muss nach dem Baden im Chlor- oder Salzwasser gründlich abgeduscht werden. Die Frage war: <em>Wie kann ich mein Kind sicher in der Dusche halten, ohne dass etwas passiert?</em>
                     </p>
 
-                    <h3 style="font-family: 'Quicksand', sans-serif; font-size: 1.5rem; color: #2d3748; margin-bottom: 1rem; font-weight: 600;">Die Entstehung</h3>
-                    <p style="line-height: 1.8; margin-bottom: 2.5rem;">
-                        Während es unzählige Hilfsmittel für die Badewanne gibt, fehlte eine einfache, sichere und kindgerechte Lösung für die Dusche. Also beschlossen wir, selbst aktiv zu werden – und so wurde DuschBaby geboren.
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #5a6c7d;">
+                        Während es unzählige Hilfsmittel für die Badewanne gibt, fehlte eine sichere Lösung für die Dusche. Also wurden wir selbst aktiv.
                     </p>
 
-                    <div class="story-quote" style="margin-bottom: 2.5rem;">
-                        Die Idee zu DuschBaby entstand aus einem ganz persönlichen Bedürfnis
+                    <div class="story-quote" style="margin-bottom: 2rem;">
+                        Die Idee zu DuschBaby entstand aus einem persönlichen Bedürfnis
                     </div>
 
-                    <h3 style="font-family: 'Quicksand', sans-serif; font-size: 1.5rem; color: #2d3748; margin-bottom: 1rem; font-weight: 600;">Unsere Mission</h3>
-                    <p style="line-height: 1.8; margin-bottom: 2.5rem;">
-                        Mit DuschBaby möchten wir Eltern den Alltag erleichtern und Kindern ein sicheres, angenehmes Duscherlebnis ermöglichen. Egal ob zu Hause oder im Urlaub.
+                    <p style="font-size: 1.15rem; margin-top: 2rem; line-height: 1.8; text-align: center; color: #1a9b95; font-weight: 500;">
+                        Aus einem kleinen Problem im Familienurlaub wurde unsere Herzensidee – und heute sind wir stolz, sie mit euch zu teilen.
                     </p>
-
-                    <p style="font-size: 1.2rem; margin-top: 1.5rem; line-height: 1.8; text-align: center;"><strong style="color: #1a9b95;">Aus einem kleinen Problem im Familienurlaub wurde unsere Herzensidee – und heute sind wir stolz, sie mit euch zu teilen.</strong></p>
                 </div>
             </div>
         </div>
