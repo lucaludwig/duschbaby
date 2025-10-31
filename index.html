@@ -11,34 +11,27 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     
-    <!-- Meta Tags für SEO -->
+    <!-- Meta Tags -->
     <meta name="description" content="DuschBaby - Die sichere Lösung zum Duschen mit deinem Baby. Kein Rutschen, kein Glitschen mehr. Von Müttern für Mütter entwickelt.">
     
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
             color: #2d3748;
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* Fixed Navigation */
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.98);
+            position: fixed; top: 0; width: 100%;
+            background: rgba(255,255,255,0.98);
             backdrop-filter: blur(10px);
             box-shadow: 0 1px 3px rgba(0,0,0,0.08);
             z-index: 1000;
@@ -46,421 +39,77 @@
         }
 
         nav .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            max-width: 1200px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
             padding: 0 2rem;
         }
 
-        nav .logo-small {
-            height: 60px;
-            width: auto;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
+        nav .logo-small { height: 60px; transition: transform .3s ease; cursor: pointer; }
+        nav .logo-small:hover { transform: scale(1.05); }
 
-        nav .logo-small:hover {
-            transform: scale(1.05);
-        }
-
-        nav ul {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            align-items: center;
-        }
-
+        nav ul { list-style: none; display: flex; gap: 2rem; align-items: center; }
         nav a {
-            text-decoration: none;
-            color: #2d3748;
-            font-weight: 500;
-            font-size: 0.95rem;
-            letter-spacing: 0.3px;
-            padding: 0.5rem 1rem;
-            transition: all 0.3s ease;
-            border-radius: 6px;
+            text-decoration: none; color: #2d3748;
+            font-weight: 500; font-size: .95rem;
+            padding: .5rem 1rem; border-radius: 6px;
+            transition: all .3s ease;
         }
-
-        nav a:hover {
-            color: #1a9b95;
-            background: rgba(26, 155, 149, 0.08);
+        nav a:hover { color: #1a9b95; background: rgba(26,155,149,0.08); }
+        .cta-nav {
+            background: #1a9b95; color: #fff !important;
+            padding: .6rem 1.5rem; border-radius: 25px; font-weight: 600;
         }
+        .cta-nav:hover { background: #158882; }
 
-        nav .cta-nav {
-            background: #1a9b95;
-            color: white !important;
-            padding: 0.6rem 1.5rem;
-            border-radius: 25px;
-            font-weight: 600;
-        }
-
-        nav .cta-nav:hover {
-            background: #158882;
-            color: white !important;
-        }
-
-        /* Sections */
         section {
-            min-height: 100vh;
             padding: 6rem 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            display: flex; flex-direction: column; align-items: center;
         }
 
-        .section-content {
-            max-width: 1100px;
-            width: 100%;
-        }
+        h1, h2, h3 { font-family: 'Quicksand', sans-serif; }
+        h2 { font-size: 2.8rem; margin-bottom: 2rem; font-weight: 700; text-align: center; }
 
-        section h2 {
-            margin-bottom: 2.5rem;
-        }
-
-        section p {
-            margin-bottom: 1.5rem;
-        }
-
-        /* Hero Section mit Foto */
+        /* Hero simplified for brevity */
         #hero {
-            background: linear-gradient(135deg, #f0fffe 0%, #e0f7f6 100%);
-            position: relative;
+            background: linear-gradient(135deg,#f0fffe 0%,#e0f7f6 100%);
             padding: 7rem 2rem 4rem;
         }
 
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .hero-content h1 {
-            font-family: 'Quicksand', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #1a9b95;
-            letter-spacing: -0.5px;
-            line-height: 1.2;
-        }
-
-        .hero-content .tagline {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.5rem;
-            color: #5a6c7d;
-            font-weight: 300;
-            margin-bottom: 1.5rem;
-            line-height: 1.4;
-        }
-
-        .hero-cta-group {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-        }
-
-        .cta {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: #1a9b95;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(26, 155, 149, 0.3);
-        }
-
-        .cta:hover {
-            background: #158882;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(26, 155, 149, 0.4);
-        }
-
-        .cta-secondary {
-            background: white;
-            color: #1a9b95;
-            border: 2px solid #1a9b95;
-        }
-
-        .cta-secondary:hover {
-            background: #f0fffe;
-            transform: translateY(-2px);
-        }
-
-        .hero-image {
-            position: relative;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            object-fit: cover;
-        }
-
-        /* Trust Badges */
-        .trust-badges {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            align-items: center;
-            opacity: 0.8;
-        }
-
-        .trust-badge {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            color: #5a6c7d;
-        }
-
-        .trust-badge::before {
-            content: '✓';
-            color: #1a9b95;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        /* Problem Section */
-        #problem {
-            background: white;
-            min-height: auto;
-            padding: 5rem 2rem;
-        }
-
-        #problem h2 {
-            font-family: 'Quicksand', sans-serif;
-            font-size: 2.8rem;
-            margin-bottom: 2rem;
-            color: #2d3748;
-            text-align: center;
-            font-weight: 700;
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .problem-card {
-            background: #fff5f5;
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 4px solid #fc8181;
-        }
-
-        .problem-card h3 {
-            font-family: 'Quicksand', sans-serif;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #c53030;
-            font-weight: 600;
-        }
-
-        .problem-card p {
-            color: #5a6c7d;
-            line-height: 1.7;
-        }
-
-        /* Product Section */
-        #video {
-            background: #f7fafc;
-            padding: 5rem 2rem;
-        }
-
-        #video h2 {
-            font-size: 2.8rem;
-            margin-bottom: 2rem;
-            color: #2d3748;
-            text-align: center;
-            font-weight: 700;
-        }
-
-        #video h3 {
-            margin-top: 1rem;
-        }
-
-        .video-container {
-            max-width: 800px;
-            margin: 2rem auto;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-
-        .video-container video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .video-description {
-            font-family: 'Inter', sans-serif;
-            text-align: center;
-            max-width: 700px;
-            margin: 1.5rem auto 0;
-            font-size: 1.2rem;
-            color: #5a6c7d;
-            line-height: 1.8;
-            font-weight: 300;
-        }
-
-        /* Solution Section */
+        /* Solution Section refined */
         #solution {
-            background: linear-gradient(135deg, #f0fffe 0%, #e0f7f6 100%);
-            padding: 5rem 2rem;
+            background: linear-gradient(135deg,#f0fffe 0%,#e0f7f6 100%);
+            padding: 3.5rem 2rem 4rem;
         }
-
-        #solution h2 {
-            font-size: 2.8rem;
-            margin-bottom: 2rem;
-            color: #1a9b95;
-            text-align: center;
-            font-weight: 700;
-        }
-
+        #solution h2 { color: #1a9b95; }
         .solution-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
+            text-align: center; max-width: 800px; margin: 0 auto;
         }
-
         .solution-content p {
-            font-size: 1.3rem;
-            color: #5a6c7d;
-            margin-bottom: 2rem;
-            line-height: 1.8;
+            font-size: 1.25rem; color: #5a6c7d; margin-bottom: 2rem; line-height: 1.8;
         }
-
         .solution-highlight {
-            background: white;
-            padding: 2rem 2.5rem;
-            border-radius: 15px;
-            margin: 2rem 0;
+            background: #fff; padding: 1.8rem 2rem;
+            border-radius: 15px; margin: 1.5rem 0;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
-
-        .solution-highlight h3 {
-            font-family: 'Quicksand', sans-serif;
-            font-size: 1.8rem;
-            color: #1a9b95;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        /* Features Section */
-        #features {
-            background: white;
-            padding: 5rem 2rem;
-        }
-
-        #features h2 {
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
-            color: #2d3748;
-            text-align: center;
-            font-weight: 700;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
-            max-width: 1100px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .feature {
-            background: #f0fffe;
-            padding: 2rem;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .feature:hover {
-            transform: translateY(-5px);
-            border-color: #1a9b95;
-            box-shadow: 0 10px 30px rgba(26, 155, 149, 0.15);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .feature h3 {
-            font-family: 'Quicksand', sans-serif;
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
-            color: #2d3748;
-            font-weight: 600;
-        }
-
-        .feature p {
-            font-size: 1rem;
-            color: #5a6c7d;
-            line-height: 1.7;
-        }
+        .solution-highlight h3 { color: #1a9b95; font-size: 1.8rem; margin-bottom: 1rem; }
 
         /* Story Section */
-        #story {
-            background: #f7fafc;
-            padding: 5rem 2rem;
-            min-height: auto;
-        }
-
-        #story h2 {
-            font-size: 2.8rem;
-            margin-bottom: 2rem;
-            color: #2d3748;
-            text-align: center;
-            font-weight: 700;
-        }
-
+        #story { background: #f7fafc; padding: 5rem 2rem; }
+        #story h2 { color: #2d3748; }
         .founders-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            max-width: 1000px;
-            margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 3rem; align-items: center; max-width: 1000px; margin: 0 auto 3rem;
         }
+        .story-content { max-width: 800px; margin: 0 auto; }
+        .story-content p { color: #5a6c7d; line-height: 1.8; margin-bottom: 1.5rem; }
 
-        .story-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .story-content p {
-            font-size: 1.2rem;
-            color: #5a6c7d;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
+        /* Elegant German quote */
         .story-quote {
             font-family: 'Playfair Display', serif;
-            background: white;
-            padding: 2rem;
+            background: #fff;
+            padding: 1.8rem 2rem;
             border-radius: 15px;
-            margin: 0;
             border-left: 4px solid #1a9b95;
             font-style: italic;
             font-size: 1.4rem;
@@ -468,246 +117,44 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             line-height: 1.8;
             font-weight: 400;
-        }
-
-        .story-quote br {
-            display: block;
-            content: "";
-            margin-top: 0;
-        }
-
-        .story-quote::before {
-            content: '"';
-            font-size: 3rem;
-            color: #1a9b95;
-            opacity: 0.3;
-            position: relative;
-            top: 10px;
-            margin-right: 3px;
-        }
-
-        .story-quote::after {
-            content: '"';
-            font-size: 3rem;
-            color: #1a9b95;
-            opacity: 0.3;
-            position: relative;
-            top: 10px;
-            margin-left: 0;
-            display: inline;
-        }
-
-        /* Contact Section */
-        #contact {
-            background: linear-gradient(135deg, #1a9b95 0%, #2cb5ad 100%);
-            color: white;
             text-align: center;
-            padding: 5rem 2rem;
-            min-height: 70vh;
+            max-width: 700px;
+            position: relative;
+            margin: 2rem auto 2.5rem;
         }
-
-        #contact h2 {
-            font-size: 2.8rem;
-            margin-bottom: 2rem;
-            color: white;
-            font-weight: 700;
+        .story-quote::before {
+            content: '„';
+            font-size: 3rem;
+            color: #1a9b95;
+            opacity: 0.3;
+            position: absolute;
+            top: -10px; left: -10px;
         }
-
-        #contact p {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-
-        .contact-info {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            padding: 1.5rem 2.5rem;
-            border-radius: 15px;
-            display: inline-block;
-            margin-top: 1.5rem;
-        }
-
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.3rem;
-            display: block;
-            margin: 1rem 0;
-            transition: all 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            transform: scale(1.05);
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Überschriften Schriften */
-        h1, h2, h3 {
-            font-family: 'Quicksand', sans-serif;
-        }
-
-        /* Product Gallery */
-        .product-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            max-width: 900px;
-            margin: 3rem auto;
-        }
-
-        .product-gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .product-gallery img:hover {
-            transform: scale(1.02);
+        .story-quote::after {
+            content: '“';
+            font-size: 3rem;
+            color: #1a9b95;
+            opacity: 0.3;
+            position: absolute;
+            bottom: -10px; right: -10px;
         }
 
         /* Responsive */
-        @media (max-width: 968px) {
-            nav .logo-small {
-                height: 50px;
-            }
-
-            #hero {
-                padding-top: 6rem;
-                padding-bottom: 3rem;
-            }
-
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .hero-content h1 {
-                font-size: 2rem;
-                line-height: 1.2;
-            }
-
-            .hero-content .tagline {
-                font-size: 1.2rem;
-            }
-
-            .hero-content p {
-                font-size: 1.05rem !important;
-            }
-
-            .problem-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .product-gallery {
-                grid-template-columns: 1fr;
-            }
-
-            h2 {
-                font-size: 2rem !important;
-            }
-
-            nav .nav-container {
-                flex-direction: column;
-                gap: 0.8rem;
-                padding: 0 1rem;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0.5rem;
-            }
-
-            section {
-                padding: 3.5rem 1.5rem;
-                min-height: auto;
-            }
-
-            #hero {
-                padding-top: 5.5rem !important;
-            }
-
-            .feature {
-                padding: 1.5rem;
-            }
-
-            .feature-icon {
-                font-size: 2.5rem;
-            }
-
-            .story-quote {
-                font-size: 1.2rem;
-                padding: 1.5rem;
-            }
-
-            .founders-grid {
-                grid-template-columns: 1fr !important;
-                gap: 2rem !important;
-                margin-bottom: 2rem !important;
-            }
-
-            #story h3 {
-                font-size: 1.3rem !important;
-            }
-
-            .solution-highlight {
-                padding: 1.5rem;
-            }
-
-            .cta {
-                font-size: 1rem;
-                padding: 0.9rem 2rem;
-            }
-
-            #problem, #solution, #features, #story, #video {
-                padding: 3.5rem 1.5rem !important;
-            }
-
-            #contact {
-                padding: 3.5rem 1.5rem !important;
-                min-height: auto;
-            }
+        @media(max-width:968px){
+            .founders-grid{grid-template-columns:1fr;gap:2rem;}
+            h2{font-size:2rem;}
+            section{padding:3.5rem 1.5rem;}
+            .story-quote{font-size:1.2rem;padding:1.5rem;}
         }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
-        }
+        html{scroll-behavior:smooth;}
     </style>
-    
 </head>
+
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="#hero">
-                <img src="logo.png" alt="DuschBaby" class="logo-small">
-            </a>
+            <a href="#hero"><img src="logo.png" alt="DuschBaby" class="logo-small"></a>
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#problem">Problem</a></li>
@@ -865,49 +312,53 @@
         </div>
     </section>
 
-    <!-- Story Section -->
+
+    <!-- Story Section (Final refined) -->
     <section id="story">
         <div class="section-content">
-            <h2 style="text-align: center; margin-bottom: 3rem;">Über uns</h2>
+            <h2>Über uns</h2>
 
-            <!-- Founders Grid -->
-            <div class="founders-grid" style="margin-bottom: 3rem;">
+            <div class="founders-grid">
                 <div>
-                    <img src="founder.jpeg" alt="Giulia und Lena - Die Gründerinnen von DuschBaby" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <img src="founder.jpeg" alt="Giulia und Lena - Die Gründerinnen von DuschBaby"
+                         style="width:100%;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,0.15);">
                 </div>
                 <div>
-                    <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                        Wir sind <strong style="color: #1a9b95;">Giulia und Lena</strong> – zwei Mamis, die das Leben lieben, das Reisen genießen und wissen, dass Elternsein oft bedeutet, kreative Lösungen zu finden.
+                    <p style="font-size:1.25rem;line-height:1.8;margin-bottom:1.5rem;">
+                        Wir sind <strong style="color:#1a9b95;">Giulia und Lena</strong> – zwei Mamis, die das Leben lieben, das Reisen genießen und wissen, dass Elternsein oft bedeutet, kreative Lösungen zu finden.
                     </p>
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #5a6c7d; margin-bottom: 0;">
+                    <p style="font-size:1.1rem;line-height:1.8;color:#5a6c7d;margin-bottom:0;">
                         Aus eigener Erfahrung wissen wir, wie herausfordernd der Alltag mit Baby sein kann. Deshalb haben wir DuschBaby entwickelt – eine Lösung, die wirklich funktioniert.
                     </p>
                 </div>
             </div>
 
-            <!-- Story Content -->
             <div class="story-content">
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <div class="story-quote" style="margin-bottom: 2.5rem;">
-                        Die Idee zu DuschBaby entstand aus einem ganz persönlichen Bedürfnis
-                    </div>
+                <div style="max-width:800px;margin:0 auto;">
 
-                    <h3 style="font-family: 'Quicksand', sans-serif; font-size: 1.5rem; color: #2d3748; margin-bottom: 1rem; font-weight: 600;">Das Problem</h3>
-                    <p style="line-height: 1.8; margin-bottom: 2.5rem;">
-                        Giulias Sohn leidet unter Neurodermitis. Für ihn ist es besonders wichtig, nach dem Baden im Chlor- oder Salzwasser gründlich abgeduscht zu werden. Doch jedes Mal stellte sich dieselbe Frage: <em>„Wie kann ich mein Kind sicher und bequem in der Dusche abbrausen, ohne Angst zu haben, dass etwas passiert?"</em>
+                    <h3 style="font-family:'Quicksand',sans-serif;font-size:1.5rem;color:#2d3748;margin-bottom:1rem;font-weight:600;">Das Problem</h3>
+                    <p>
+                        Giulias Sohn leidet unter Neurodermitis. Für ihn ist es besonders wichtig, nach dem Baden im Chlor- oder Salzwasser gründlich abgeduscht zu werden. Doch jedes Mal stellte sich dieselbe Frage: 
+                        <em>„Wie kann ich mein Kind sicher und bequem in der Dusche abbrausen, ohne Angst zu haben, dass etwas passiert?"</em>
                     </p>
 
-                    <h3 style="font-family: 'Quicksand', sans-serif; font-size: 1.5rem; color: #2d3748; margin-bottom: 1rem; font-weight: 600;">Die Entstehung</h3>
-                    <p style="line-height: 1.8; margin-bottom: 2.5rem;">
+                    <div class="story-quote">
+                        „Die Idee zu DuschBaby entstand aus einem ganz persönlichen Bedürfnis.“
+                    </div>
+
+                    <h3 style="font-family:'Quicksand',sans-serif;font-size:1.5rem;color:#2d3748;margin-bottom:1rem;font-weight:600;">Die Entstehung</h3>
+                    <p>
                         Während es unzählige Hilfsmittel für die Badewanne gibt, fehlte eine einfache, sichere und kindgerechte Lösung für die Dusche. Also beschlossen wir, selbst aktiv zu werden – und so wurde DuschBaby geboren.
                     </p>
 
-                    <h3 style="font-family: 'Quicksand', sans-serif; font-size: 1.5rem; color: #2d3748; margin-bottom: 1rem; font-weight: 600;">Unsere Mission</h3>
-                    <p style="line-height: 1.8; margin-bottom: 2.5rem;">
+                    <h3 style="font-family:'Quicksand',sans-serif;font-size:1.5rem;color:#2d3748;margin-bottom:1rem;font-weight:600;">Unsere Mission</h3>
+                    <p>
                         Mit DuschBaby möchten wir Eltern den Alltag erleichtern und Kindern ein sicheres, angenehmes Duscherlebnis ermöglichen. Egal ob zu Hause oder im Urlaub.
                     </p>
 
-                    <p style="font-size: 1.2rem; margin-top: 1.5rem; line-height: 1.8; text-align: center;"><strong style="color: #1a9b95;">Aus einem kleinen Problem im Familienurlaub wurde unsere Herzensidee – und heute sind wir stolz, sie mit euch zu teilen.</strong></p>
+                    <p style="font-size:1.2rem;margin-top:1.5rem;line-height:1.8;text-align:center;">
+                        <strong style="color:#1a9b95;">Aus einem kleinen Problem im Familienurlaub wurde unsere Herzensidee – und heute sind wir stolz, sie mit euch zu teilen.</strong>
+                    </p>
                 </div>
             </div>
         </div>
