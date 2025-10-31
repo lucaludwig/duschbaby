@@ -104,7 +104,7 @@
         /* Sections */
         section {
             min-height: 100vh;
-            padding: 8rem 2rem 4rem;
+            padding: 6rem 2rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -116,12 +116,19 @@
             width: 100%;
         }
 
+        section h2 {
+            margin-bottom: 2.5rem;
+        }
+
+        section p {
+            margin-bottom: 1.5rem;
+        }
+
         /* Hero Section mit Foto */
         #hero {
             background: linear-gradient(135deg, #f0fffe 0%, #e0f7f6 100%);
             position: relative;
-            padding: 6rem 2rem 4rem;
-            padding-top: 5rem;
+            padding: 7rem 2rem 4rem;
         }
 
         .hero-grid {
@@ -140,7 +147,7 @@
             margin-bottom: 1rem;
             color: #1a9b95;
             letter-spacing: -0.5px;
-            line-height: 1.1;
+            line-height: 1.2;
         }
 
         .hero-content .tagline {
@@ -148,7 +155,7 @@
             font-size: 1.5rem;
             color: #5a6c7d;
             font-weight: 300;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
             line-height: 1.4;
         }
 
@@ -156,7 +163,7 @@
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
 
         .cta {
@@ -228,12 +235,14 @@
         /* Problem Section */
         #problem {
             background: white;
+            min-height: auto;
+            padding: 5rem 2rem;
         }
 
         #problem h2 {
             font-family: 'Quicksand', sans-serif;
             font-size: 2.8rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             color: #2d3748;
             text-align: center;
             font-weight: 700;
@@ -269,11 +278,12 @@
         /* Video Section */
         #video {
             background: #f7fafc;
+            padding: 5rem 2rem;
         }
 
         #video h2 {
             font-size: 2.8rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             color: #2d3748;
             text-align: center;
             font-weight: 700;
@@ -281,7 +291,7 @@
 
         .video-container {
             max-width: 800px;
-            margin: 3rem auto;
+            margin: 2rem auto;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0,0,0,0.15);
@@ -297,7 +307,7 @@
             font-family: 'Inter', sans-serif;
             text-align: center;
             max-width: 700px;
-            margin: 2rem auto 0;
+            margin: 1.5rem auto 0;
             font-size: 1.2rem;
             color: #5a6c7d;
             line-height: 1.8;
@@ -307,6 +317,7 @@
         /* Solution Section */
         #solution {
             background: linear-gradient(135deg, #f0fffe 0%, #e0f7f6 100%);
+            padding: 5rem 2rem;
         }
 
         #solution h2 {
@@ -332,9 +343,9 @@
 
         .solution-highlight {
             background: white;
-            padding: 2.5rem 3rem;
+            padding: 2rem 2.5rem;
             border-radius: 15px;
-            margin: 3rem 0;
+            margin: 2rem 0;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
 
@@ -349,11 +360,12 @@
         /* Features Section */
         #features {
             background: white;
+            padding: 5rem 2rem;
         }
 
         #features h2 {
             font-size: 2.8rem;
-            margin-bottom: 3rem;
+            margin-bottom: 1.5rem;
             color: #2d3748;
             text-align: center;
             font-weight: 700;
@@ -361,17 +373,17 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2.5rem;
-            margin-top: 3rem;
-            max-width: 900px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+            max-width: 1100px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .feature {
             background: #f0fffe;
-            padding: 2.5rem;
+            padding: 2rem;
             border-radius: 15px;
             transition: all 0.3s ease;
             border: 2px solid transparent;
@@ -384,20 +396,20 @@
         }
 
         .feature-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            margin-bottom: 0.8rem;
         }
 
         .feature h3 {
             font-family: 'Quicksand', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
             color: #2d3748;
             font-weight: 600;
         }
 
         .feature p {
-            font-size: 1.05rem;
+            font-size: 1rem;
             color: #5a6c7d;
             line-height: 1.7;
         }
@@ -405,6 +417,7 @@
         /* Story Section */
         #story {
             background: #f7fafc;
+            padding: 5rem 2rem;
         }
 
         #story h2 {
@@ -431,15 +444,15 @@
         .story-quote {
             font-family: 'Playfair Display', serif;
             background: white;
-            padding: 2.5rem;
+            padding: 2rem;
             border-radius: 15px;
-            margin: 3rem 0;
+            margin: 2rem 0;
             border-left: 4px solid #1a9b95;
             font-style: italic;
             font-size: 1.4rem;
             color: #2d3748;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            line-height: 2;
+            line-height: 1.8;
             font-weight: 400;
         }
 
@@ -456,7 +469,7 @@
             opacity: 0.3;
             position: relative;
             top: 10px;
-            margin-right: 5px;
+            margin-right: 3px;
         }
 
         .story-quote::after {
@@ -466,7 +479,8 @@
             opacity: 0.3;
             position: relative;
             top: 10px;
-            margin-left: 5px;
+            margin-left: 0;
+            display: inline;
         }
 
         /* Contact Section */
@@ -474,6 +488,8 @@
             background: linear-gradient(135deg, #1a9b95 0%, #2cb5ad 100%);
             color: white;
             text-align: center;
+            padding: 5rem 2rem;
+            min-height: 70vh;
         }
 
         #contact h2 {
@@ -493,10 +509,10 @@
         .contact-info {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
-            padding: 2rem 3rem;
+            padding: 1.5rem 2.5rem;
             border-radius: 15px;
             display: inline-block;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
 
         .contact-info a {
@@ -523,6 +539,27 @@
             font-family: 'Quicksand', sans-serif;
         }
 
+        /* Product Gallery */
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 900px;
+            margin: 3rem auto;
+        }
+
+        .product-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-gallery img:hover {
+            transform: scale(1.02);
+        }
+
         /* Responsive */
         @media (max-width: 968px) {
             nav .logo-small {
@@ -530,7 +567,7 @@
             }
 
             #hero {
-                padding-top: 4.5rem;
+                padding-top: 6rem;
                 padding-bottom: 3rem;
             }
 
@@ -540,11 +577,16 @@
             }
 
             .hero-content h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
+                line-height: 1.2;
             }
 
             .hero-content .tagline {
                 font-size: 1.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.05rem !important;
             }
 
             .problem-grid {
@@ -556,13 +598,18 @@
                 grid-template-columns: 1fr;
             }
 
+            .product-gallery {
+                grid-template-columns: 1fr;
+            }
+
             h2 {
-                font-size: 2.2rem !important;
+                font-size: 2rem !important;
             }
 
             nav .nav-container {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0.8rem;
+                padding: 0 1rem;
             }
 
             nav ul {
@@ -572,7 +619,43 @@
             }
 
             section {
-                padding: 5rem 1.5rem 3rem;
+                padding: 3.5rem 1.5rem;
+                min-height: auto;
+            }
+
+            #hero {
+                padding-top: 5.5rem !important;
+            }
+
+            .feature {
+                padding: 1.5rem;
+            }
+
+            .feature-icon {
+                font-size: 2.5rem;
+            }
+
+            .story-quote {
+                font-size: 1.2rem;
+                padding: 1.5rem;
+            }
+
+            .solution-highlight {
+                padding: 1.5rem;
+            }
+
+            .cta {
+                font-size: 1rem;
+                padding: 0.9rem 2rem;
+            }
+
+            #problem, #solution, #features, #story, #video {
+                padding: 3.5rem 1.5rem !important;
+            }
+
+            #contact {
+                padding: 3.5rem 1.5rem !important;
+                min-height: auto;
             }
         }
 
@@ -593,15 +676,6 @@
         }
     </style>
     
-    <script>
-        // Stelle sicher, dass die Seite beim Laden oben ist
-        if (history.scrollRestoration) {
-            history.scrollRestoration = 'manual';
-        }
-        window.addEventListener('beforeunload', function () {
-            window.scrollTo(0, 0);
-        });
-    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -625,9 +699,12 @@
     <section id="hero">
         <div class="hero-grid">
             <div class="hero-content fade-in-up">
-                <h1>Sicher duschen mit deinem Baby</h1>
-                <p class="tagline">Nie wieder Angst vor rutschigen Händen – DuschBaby gibt dir den sicheren Halt, den du brauchst.</p>
-                
+                <h1>Sicher. Sanft. DuschBaby.</h1>
+                <p class="tagline">Mit viel Liebe und Geborgenheit</p>
+                <p style="font-size: 1.25rem; color: #5a6c7d; margin-bottom: 2rem; line-height: 1.7; font-weight: 400;">
+                    Erlebe das sichere Gefühl, dein Baby beim Duschen fest in den Armen zu halten. <strong style="color: #1a9b95;">Sicher. Praktisch. Liebevoll.</strong>
+                </p>
+
                 <div class="hero-cta-group">
                     <a href="#video" class="cta">Produkt ansehen</a>
                     <a href="#contact" class="cta cta-secondary">Jetzt anfragen</a>
@@ -639,9 +716,9 @@
                     <div class="trust-badge">Made in Germany</div>
                 </div>
             </div>
-            
+
             <div class="hero-image fade-in-up">
-                <img src="produkt.jpg" alt="Mutter mit Baby beim Duschen mit DuschBaby">
+                <img src="produkt.jpg" alt="DuschBaby - Mit Liebe duschen. Mit Sicherheit halten.">
             </div>
         </div>
     </section>
@@ -649,23 +726,21 @@
     <!-- Problem Section -->
     <section id="problem">
         <div class="section-content">
-            <h2>Das Problem kennen alle Eltern</h2>
-            
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <h3>😰 Angst vor dem Rutschen</h3>
-                    <p>Durch Seife und Wasser wird dein Baby glitschig und rutschig – die ständige Angst, dass es dir aus den Händen gleitet, ist real.</p>
-                </div>
-                
-                <div class="problem-card">
-                    <h3>💔 Stress statt Entspannung</h3>
-                    <p>Die Dusche sollte ein schöner Moment sein, wird aber zur Belastung. Viele Eltern verzichten komplett darauf.</p>
-                </div>
-                
-                <div class="problem-card">
-                    <h3>🚫 Keine guten Lösungen</h3>
-                    <p>Bisherige Alternativen sind unpraktisch, teuer oder funktionieren nicht wirklich. Eltern brauchen eine echte Lösung.</p>
-                </div>
+            <h2>Das Problem</h2>
+
+            <div style="max-width: 850px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.2rem; color: #5a6c7d; line-height: 1.8; margin-bottom: 1.5rem;">
+                    <strong style="color: #2d3748;">Nasse Haut, glitschige Arme.</strong> Jeder Elternteil kennt das unsichere Gefühl beim Duschen mit dem Baby. DuschBaby wurde genau dafür entwickelt:
+                </p>
+                <p style="font-size: 1.15rem; color: #5a6c7d; line-height: 1.8; margin-bottom: 1.5rem;">
+                    Ein spezieller, rutschfester Handschuh, der festen Halt bietet, ohne dabei die Haut deines Babys zu reizen.
+                </p>
+                <p style="font-size: 1.15rem; color: #5a6c7d; line-height: 1.8; margin-bottom: 1.5rem;">
+                    So kannst du dich voll und ganz auf das Schönste konzentrieren – das gemeinsame Duscherlebnis mit deinem Baby. Ob nach dem Strandtag, beim Babyschwimmen oder einfach in der heimischen Dusche.
+                </p>
+                <p style="font-size: 1.25rem; color: #1a9b95; font-weight: 600; margin-top: 1.5rem;">
+                    Weil Sicherheit an erster Stelle steht!
+                </p>
             </div>
         </div>
     </section>
@@ -674,18 +749,22 @@
     <section id="video">
         <div class="section-content">
             <h2>So funktioniert DuschBaby</h2>
-            
+
             <div class="video-container">
                 <video autoplay loop muted playsinline poster="produkt.jpg">
                     <source src="demo.mp4" type="video/mp4">
                     Dein Browser unterstützt keine Videos.
                 </video>
             </div>
-            
+
             <p class="video-description">
-                Sieh dir an, wie einfach und sicher das Duschen mit DuschBaby funktioniert. 
-                Kein Rutschen, kein Stress – nur entspannte Momente mit deinem Baby.
+                Sieh dir an, wie einfach und sicher das Duschen mit DuschBaby funktioniert.<br>
+                <strong>Kein Rutschen, kein Stress</strong> – nur entspannte Momente mit deinem Baby.
             </p>
+
+            <div style="max-width: 600px; margin: 2rem auto 0;">
+                <img src="produkt-shot-1.jpeg" alt="DuschBaby Duschhandschuh mit Nassbeutel" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            </div>
         </div>
     </section>
 
@@ -693,15 +772,24 @@
     <section id="solution">
         <div class="section-content">
             <div class="solution-content">
-                <h2>Die Lösung: DuschBaby</h2>
-                <p>DuschBaby gibt dir die Sicherheit, die du brauchst, um dein Kind entspannt zu duschen – kein Rutschen, kein Glitschen mehr.</p>
-                
+                <h2>Die Lösung</h2>
+
+                <p style="font-size: 1.25rem; margin-bottom: 2rem; line-height: 1.8;">
+                    Mit DuschBaby hast du dein Baby <strong style="color: #1a9b95;">immer sicher im Griff</strong>. Egal, ob zuhause, im Urlaub oder nach dem Babyschwimmen.
+                </p>
+
                 <div class="solution-highlight">
-                    <h3>🎯 Anti-Rutsch-Technologie</h3>
-                    <p>Mit DuschBaby hast du dein Baby sicher im Griff, auch wenn es nass und seifig ist. Die spezielle Anti-Rutsch-Oberfläche sorgt für perfekten Halt.</p>
+                    <h3>Der innovative Duschhandschuh</h3>
+                    <p style="font-size: 1.15rem; line-height: 1.8;">Der innovative Duschhandschuh sorgt dafür, dass dein kleiner Schatz beim Duschen nicht aus den Armen gleitet.</p>
                 </div>
-                
-                <p>Entwickelt von Müttern für Mütter – weil wir genau verstehen, was du brauchst. Endlich kannst du die gemeinsame Duschzeit mit deinem Baby genießen.</p>
+
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem; line-height: 1.8;">
+                    Für unbeschwerte, liebevolle Momente voller Vertrauen und Nähe.
+                </p>
+
+                <p style="font-size: 1.15rem; color: #5a6c7d; line-height: 1.8;">
+                    Das hochwertige, schnell trocknende Material ist sanft zur Haut und begleitet euch überall hin.
+                </p>
             </div>
         </div>
     </section>
@@ -710,26 +798,38 @@
     <section id="features">
         <div class="section-content">
             <h2>Warum DuschBaby?</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #5a6c7d; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">Ein Handschuh, der den Unterschied macht:</p>
+
             <div class="features-grid">
                 <div class="feature">
                     <div class="feature-icon">🛡️</div>
-                    <h3>Absolut sicher</h3>
-                    <p>Anti-Rutsch-Design gibt dir sicheren Halt – dein Baby kann nicht mehr aus der Hand gleiten. Geprüft und zertifiziert.</p>
+                    <h3>Rutschfest und hautfreundlich</h3>
+                    <p>Rutschfest und hautfreundlich für maximale Sicherheit. Die spezielle Oberfläche gibt dir perfekten Halt, während das Material sanft zur empfindlichen Babyhaut bleibt.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✋</div>
+                    <h3>Passt sich jeder Handgröße an</h3>
+                    <p>Universelles Design passt sich jeder Handgröße an – egal ob Papa, Mama oder andere Betreuungspersonen den DuschBaby verwenden.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">💙</div>
-                    <h3>Komfortabel</h3>
-                    <p>Ergonomisches Design für maximalen Komfort von Mutter und Kind. Angenehmes Material, das sich gut anfühlt.</p>
+                    <h3>Ergonomisches Design</h3>
+                    <p>Ergonomisches Design für maximalen Komfort von Mutter und Kind. Angenehmes Material, das sich natürlich anfühlt.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">✨</div>
-                    <h3>Kinderleicht</h3>
-                    <p>Einfache Anwendung – einfach anlegen und schon kannst du sicher duschen. Keine komplizierte Installation nötig.</p>
+                    <div class="feature-icon">💨</div>
+                    <h3>Schnell trocknend</h3>
+                    <p>Schnell trocknend und hygienisch. Das spezielle Material trocknet rasch und ist leicht zu reinigen – perfekt für unterwegs.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">🌊</div>
-                    <h3>100% Wasserfest</h3>
-                    <p>Speziell für den Einsatz in der Dusche entwickelt und getestet. Langlebiges, pflegeleichtes Material.</p>
+                    <div class="feature-icon">👶</div>
+                    <h3>Für Neugeborene bis 24 Monate</h3>
+                    <p>Ideal für Neugeborene und Babys bis ca. 24 Monate. Wächst mit deinem Baby mit und begleitet euch durch die erste wichtige Zeit.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎒</div>
+                    <h3>Inkl. Nassbeutel</h3>
+                    <p>Inkl. Nassbeutel für hygienische Aufbewahrung. Perfekt für Urlaub, Schwimmbad oder den Transport in der Wickeltasche.</p>
                 </div>
             </div>
         </div>
@@ -739,15 +839,28 @@
     <section id="story">
         <div class="section-content">
             <div class="story-content">
-                <h2>Unsere Geschichte</h2>
-                <p>DuschBaby wurde aus eigener Erfahrung geboren. Als Mutter kenne ich die Herausforderungen und Ängste beim Duschen mit dem Baby nur zu gut.</p>
-                
+                <h2>Über uns</h2>
+                <p style="font-size: 1.2rem; line-height: 1.8;">
+                    Wir sind <strong>Giulia und Lena</strong> – zwei Mamis, die das Leben lieben, das Reisen genießen und wissen, dass Elternsein oft bedeutet, kreative Lösungen zu finden.
+                </p>
+
                 <div class="story-quote">
-                    Nach unzähligen stressigen Duschmomenten wusste ich:<br>Es muss eine bessere Lösung geben.<br>Also habe ich sie selbst entwickelt.
+                    Die Idee zu DuschBaby entstand aus einem ganz persönlichen Bedürfnis
                 </div>
-                
-                <p>Was als persönliche Lösung begann, ist heute ein Produkt, das Eltern mehr Sicherheit und Entspannung schenkt.</p>
-                <p><strong>Von Müttern entwickelt. Für alle Eltern gemacht.</strong></p>
+
+                <p style="line-height: 1.8;">
+                    Giulias Sohn leidet unter Neurodermitis. Für ihn ist es besonders wichtig, nach dem Baden im Chlor- oder Salzwasser gründlich abgeduscht zu werden. Doch jedes Mal stellte sich dieselbe Frage: <em>Wie kann ich mein Kind sicher und bequem in der Dusche abbrausen, ohne Angst zu haben, dass etwas passiert?</em>
+                </p>
+
+                <p style="line-height: 1.8;">
+                    Während es unzählige Hilfsmittel für die Badewanne gibt, fehlte eine einfache, sichere und kindgerechte Lösung für die Dusche. Also beschlossen wir, selbst aktiv zu werden und so wurde DuschBaby geboren.
+                </p>
+
+                <p style="line-height: 1.8;">
+                    Mit DuschBaby möchten wir Eltern den Alltag erleichtern und Kindern ein sicheres, angenehmes Duscherlebnis ermöglichen. Egal ob zu Hause oder im Urlaub.
+                </p>
+
+                <p style="font-size: 1.15rem; margin-top: 2rem; line-height: 1.8;"><strong>Aus einem kleinen Problem im Familienurlaub wurde unsere Herzensidee und heute sind wir stolz, sie mit euch zu teilen.</strong></p>
             </div>
         </div>
     </section>
@@ -756,13 +869,13 @@
     <section id="contact">
         <div class="section-content">
             <h2>Bereit für entspannte Duschmomente?</h2>
-            <p>Kontaktiere uns für weitere Informationen oder Vorbestellungen.</p>
-            
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem;">Kontaktiere uns für weitere Informationen oder Vorbestellungen.</p>
+
             <div class="contact-info">
                 <a href="mailto:kontakt@duschbaby.de">📧 kontakt@duschbaby.de</a>
             </div>
-            
-            <div style="margin-top: 3rem;">
+
+            <div style="margin-top: 2.5rem;">
                 <a href="#hero" class="cta cta-secondary" style="background: white; color: #1a9b95;">Zurück nach oben</a>
             </div>
         </div>
