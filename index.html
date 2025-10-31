@@ -466,16 +466,17 @@
         .story-quote {
             font-family: 'Playfair Display', serif;
             background: white;
-            padding: 2rem;
+            padding: 2.5rem 3rem;
             border-radius: 15px;
             margin: 0;
-            border-left: 4px solid #1a9b95;
+            border-left: 5px solid #1a9b95;
             font-style: italic;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: #2d3748;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            line-height: 1.8;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            line-height: 1.9;
             font-weight: 400;
+            text-align: center;
         }
 
         .story-quote br {
@@ -485,24 +486,25 @@
         }
 
         .story-quote::before {
-            content: '"';
-            font-size: 3rem;
+            content: '„';
+            font-size: 2.5rem;
             color: #1a9b95;
-            opacity: 0.3;
+            opacity: 0.4;
             position: relative;
-            top: 10px;
-            margin-right: 3px;
+            top: 8px;
+            margin-right: 5px;
+            line-height: 0;
         }
 
         .story-quote::after {
             content: '"';
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: #1a9b95;
-            opacity: 0.3;
+            opacity: 0.4;
             position: relative;
-            top: 10px;
-            margin-left: 0;
-            display: inline;
+            top: 8px;
+            margin-left: 5px;
+            line-height: 0;
         }
 
         /* Contact Section */
@@ -668,8 +670,15 @@
             }
 
             .story-quote {
-                font-size: 1.2rem;
-                padding: 1.5rem;
+                font-size: 1.15rem;
+                padding: 1.8rem 1.5rem;
+                line-height: 1.8;
+            }
+
+            .story-quote::before,
+            .story-quote::after {
+                font-size: 2rem;
+                top: 5px;
             }
 
             .founders-grid {
@@ -891,19 +900,19 @@
             <div class="story-content">
                 <div style="max-width: 750px; margin: 0 auto;">
 
-                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #5a6c7d;">
-                        Giulias Sohn leidet unter Neurodermitis und muss nach dem Baden im Chlor- oder Salzwasser gründlich abgeduscht werden. Die Frage war: <em>Wie kann ich mein Kind sicher in der Dusche halten, ohne dass etwas passiert?</em>
+                    <p style="font-size: 1.1rem; line-height: 1.9; margin-bottom: 2.5rem; color: #5a6c7d; text-align: center;">
+                        Giulias Sohn leidet unter Neurodermitis und muss nach dem Baden im Chlor- oder Salzwasser gründlich abgeduscht werden. Die Frage war: <em style="color: #2d3748;">„Wie kann ich mein Kind sicher in der Dusche halten, ohne dass etwas passiert?"</em>
                     </p>
 
-                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #5a6c7d;">
+                    <p style="font-size: 1.1rem; line-height: 1.9; margin-bottom: 3rem; color: #5a6c7d; text-align: center;">
                         Während es unzählige Hilfsmittel für die Badewanne gibt, fehlte eine sichere Lösung für die Dusche. Also wurden wir selbst aktiv.
                     </p>
 
-                    <div class="story-quote" style="margin-bottom: 2rem;">
+                    <div class="story-quote" style="margin: 3rem auto;">
                         Die Idee zu DuschBaby entstand aus einem persönlichen Bedürfnis
                     </div>
 
-                    <p style="font-size: 1.15rem; margin-top: 2rem; line-height: 1.8; text-align: center; color: #1a9b95; font-weight: 500;">
+                    <p style="font-size: 1.2rem; margin-top: 3rem; line-height: 1.9; text-align: center; color: #1a9b95; font-weight: 500;">
                         Aus einem kleinen Problem im Familienurlaub wurde unsere Herzensidee – und heute sind wir stolz, sie mit euch zu teilen.
                     </p>
                 </div>
