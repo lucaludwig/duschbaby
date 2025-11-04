@@ -14,13 +14,15 @@
     <!-- Meta Tags für SEO -->
     <meta name="description" content="DuschBaby - Die sichere Lösung zum Duschen mit deinem Baby. Kein Rutschen, kein Glitschen mehr. Von Müttern für Mütter entwickelt.">
     
-    <!-- Preload Hero Image -->
-    <link rel="preload" as="image" href="produkt.jpg">
+    <!-- Preload Critical Images -->
+    <link rel="preload" as="image" href="produkt.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="logo.png">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Optimized -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
     <style>
         * {
@@ -217,6 +219,7 @@
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.15);
             object-fit: cover;
+            aspect-ratio: 3/4;
         }
 
         /* Trust Badges */
@@ -772,7 +775,7 @@
             </div>
 
             <div class="hero-image fade-in-up">
-                <img src="produkt.jpg" alt="DuschBaby - Mit Liebe duschen. Mit Sicherheit halten." loading="eager" decoding="async">
+                <img src="produkt.jpg" alt="DuschBaby - Mit Liebe duschen. Mit Sicherheit halten." loading="eager" decoding="async" fetchpriority="high" width="600" height="800">
             </div>
         </div>
     </section>
@@ -799,7 +802,7 @@
             <h2>Das Produkt</h2>
 
             <div style="max-width: 700px; margin: 0 auto 2rem;">
-                <img src="produkt-shot-1.jpeg" alt="DuschBaby Duschhandschuh mit Nassbeutel" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <img src="produkt-shot-1.jpeg" alt="DuschBaby Duschhandschuh mit Nassbeutel" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" loading="lazy" decoding="async">
             </div>
 
             <p style="text-align: center; font-size: 1.2rem; color: #5a6c7d; line-height: 1.8; max-width: 650px; margin: 0 auto 4rem;">
@@ -809,7 +812,7 @@
             <h3 style="font-family: 'Quicksand', sans-serif; font-size: 2rem; color: #2d3748; text-align: center; margin-bottom: 1.5rem; font-weight: 700;">So funktioniert's</h3>
 
             <div class="video-container">
-                <video autoplay loop muted playsinline poster="produkt.jpg">
+                <video autoplay loop muted playsinline poster="produkt.jpg" preload="metadata">
                     <source src="demo.mp4" type="video/mp4">
                     Dein Browser unterstützt keine Videos.
                 </video>
@@ -887,7 +890,7 @@
             <!-- Founders Grid -->
             <div class="founders-grid" style="margin-bottom: 3rem;">
                 <div>
-                    <img src="founder.jpeg" alt="Giulia und Lena - Die Gründerinnen von DuschBaby" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <img src="founder.jpeg" alt="Giulia und Lena - Die Gründerinnen von DuschBaby" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" loading="lazy" decoding="async">
                 </div>
                 <div>
                     <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 1.5rem;">
