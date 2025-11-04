@@ -103,7 +103,7 @@
         }
 
         nav .logo-small {
-            height: 60px;
+            height: 80px;
             width: auto;
             cursor: pointer;
             transition: transform 0.3s ease;
@@ -649,6 +649,106 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
 
+        /* Testimonials Section */
+        #testimonials {
+            background: white;
+            padding: 5rem 2rem;
+            overflow: hidden;
+        }
+
+        .testimonials-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonials-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #f7fafc;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem 3rem;
+            box-sizing: border-box;
+        }
+
+        .testimonial-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #1a9b95;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 20px rgba(26, 155, 149, 0.2);
+        }
+
+        .testimonial-content {
+            text-align: center;
+            max-width: 650px;
+        }
+
+        .testimonial-text {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #1a9b95;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.95rem;
+            color: #5a6c7d;
+        }
+
+        /* Slider dots */
+        .testimonial-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 2.5rem;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #cbd5e0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            padding: 0;
+        }
+
+        .dot:hover {
+            background: #1a9b95;
+            transform: scale(1.2);
+        }
+
+        .dot.active {
+            background: #1a9b95;
+            width: 30px;
+            border-radius: 6px;
+        }
+
         /* Footer improvements */
         footer a {
             transition: all 0.3s ease;
@@ -666,7 +766,7 @@
             }
 
             nav .logo-small {
-                height: 45px;
+                height: 65px;
             }
 
             nav {
@@ -785,13 +885,26 @@
                 padding: 0.9rem 2rem;
             }
 
-            #problem, #solution, #features, #story, #video {
+            #problem, #solution, #features, #story, #video, #testimonials {
                 padding: 3.5rem 1.5rem !important;
             }
 
             #contact {
                 padding: 3.5rem 1.5rem !important;
                 min-height: auto;
+            }
+
+            .testimonial-slide {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .testimonial-text {
+                font-size: 1.05rem;
+            }
+
+            .testimonial-image {
+                width: 100px;
+                height: 100px;
             }
         }
 
@@ -971,6 +1084,90 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="section-content">
+            <h2 style="font-size: 2.8rem; margin-bottom: 3rem; color: #2d3748; text-align: center; font-weight: 700;">Das sagen unsere Kunden</h2>
+
+            <div class="testimonials-container">
+                <div class="testimonials-slider">
+                    <div class="testimonial-track" id="testimonialTrack">
+
+                        <!-- Jana -->
+                        <div class="testimonial-slide">
+                            <img src="jana.jpeg" alt="Jana" class="testimonial-image" loading="lazy" width="120" height="120">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">
+                                    "Der DuschBaby Handschuh ist super praktisch und gibt mir beim Duschen mit meinem Kind ein richtig sicheres Gefühl. Das Material ist angenehm weich, aber trotzdem griffig. Mein Baby rutscht mir nicht mehr so leicht weg. Die Passform ist auch klasse, sitzt gut an der Hand und trocknet nach dem Gebrauch schnell. Für mich eine echte Erleichterung im Alltag!"
+                                </p>
+                                <div class="testimonial-author">Jana, 34</div>
+                                <div class="testimonial-role">Mama aus München</div>
+                            </div>
+                        </div>
+
+                        <!-- Teresa -->
+                        <div class="testimonial-slide">
+                            <img src="teresa.jpeg" alt="Teresa" class="testimonial-image" loading="lazy" width="120" height="120">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">
+                                    "Mein Kind hasst Baden und will nur Duschen. Das war früher immer ein kleines Abenteuer! Mit dem DuschBaby ist das jetzt total entspannt. Ich habe endlich ein sicheres Gefühl, der Handschuh ist schön soft, aber super rutschfest. Mein Kind rutscht mir nicht mehr weg. Eine echte Erleichterung, die mich so entspannen lässt, zu Hause und unterwegs."
+                                </p>
+                                <div class="testimonial-author">Teresa, 36</div>
+                                <div class="testimonial-role">Mama aus Hamburg</div>
+                            </div>
+                        </div>
+
+                        <!-- Max -->
+                        <div class="testimonial-slide">
+                            <img src="max.jpeg" alt="Max" class="testimonial-image" loading="lazy" width="120" height="120">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">
+                                    "Bei uns zu Hause ist das Bad leider echt klein. Baden ist da keine Option 😅. Deshalb ist das DuschBaby sowohl zu Hause als auch unterwegs ständig im Einsatz! 💦"
+                                </p>
+                                <div class="testimonial-author">Max, 35</div>
+                                <div class="testimonial-role">Papa aus Berlin</div>
+                            </div>
+                        </div>
+
+                        <!-- Nadine -->
+                        <div class="testimonial-slide">
+                            <img src="nadine.jpeg" alt="Nadine" class="testimonial-image" loading="lazy" width="120" height="120">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">
+                                    "Baden ist für mein Baby der absolute Horror, aber beim Duschen hatte ich einfach immer Angst, dass er mir aus der Hand rutscht. Dank DuschBaby habe ich endlich eine Lösung, mein Baby bedürfnisorientiert und vor allem sicher zu pflegen. Ich liebe es!"
+                                </p>
+                                <div class="testimonial-author">Nadine, 38</div>
+                                <div class="testimonial-role">Mama aus Köln</div>
+                            </div>
+                        </div>
+
+                        <!-- Lukas -->
+                        <div class="testimonial-slide">
+                            <img src="lukas.jpeg" alt="Lukas" class="testimonial-image" loading="lazy" width="120" height="120">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">
+                                    "Mit zwei kleinen Kindern unterwegs zu sein heißt: praktisch muss es sein! Unser DuschBaby ist immer dabei. Leicht, kompakt, sicher und perfekt, wenn es mal keine Badewanne gibt."
+                                </p>
+                                <div class="testimonial-author">Lukas, 38</div>
+                                <div class="testimonial-role">Papa aus Frankfurt</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Navigation Dots -->
+                <div class="testimonial-dots" id="testimonialDots">
+                    <button class="dot active" onclick="goToSlide(0)" aria-label="Testimonial 1"></button>
+                    <button class="dot" onclick="goToSlide(1)" aria-label="Testimonial 2"></button>
+                    <button class="dot" onclick="goToSlide(2)" aria-label="Testimonial 3"></button>
+                    <button class="dot" onclick="goToSlide(3)" aria-label="Testimonial 4"></button>
+                    <button class="dot" onclick="goToSlide(4)" aria-label="Testimonial 5"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Story Section -->
     <section id="story">
         <div class="section-content">
@@ -1042,6 +1239,58 @@
             </div>
         </div>
     </footer>
+
+    <!-- Testimonials Slider Script -->
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 5;
+        let autoSlideInterval;
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+            resetAutoSlide();
+        }
+
+        function updateSlider() {
+            const track = document.getElementById('testimonialTrack');
+            const dots = document.querySelectorAll('.dot');
+
+            // Move slider
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        // Start auto-slide when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            startAutoSlide();
+        });
+
+        // Pause auto-slide when user hovers over testimonials
+        const slider = document.querySelector('.testimonials-slider');
+        if (slider) {
+            slider.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+            slider.addEventListener('mouseleave', startAutoSlide);
+        }
+    </script>
 
 </body>
 </html>
