@@ -2,7 +2,8 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#1a9b95">
     <title>DuschBaby - Dein Kind sicher duschen</title>
     
     <!-- Favicons -->
@@ -13,10 +14,25 @@
     
     <!-- Meta Tags für SEO -->
     <meta name="description" content="DuschBaby - Die sichere Lösung zum Duschen mit deinem Baby. Kein Rutschen, kein Glitschen mehr. Von Müttern für Mütter entwickelt.">
+    <meta name="keywords" content="DuschBaby, Baby duschen, Babyhandschuh, Rutschfest, Baby Dusche, Neurodermitis Baby, Babyschwimmen, Baby Urlaub">
+    <meta name="author" content="Giulia Blumeyer & Lena Liebeck">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://duschbaby.de/">
+    <meta property="og:title" content="DuschBaby - Sicher duschen mit deinem Baby">
+    <meta property="og:description" content="Die sichere Lösung zum Duschen mit deinem Baby. Rutschfest, hautfreundlich und von Müttern entwickelt. Für entspannte Duschmomente.">
+    <meta property="og:image" content="https://duschbaby.de/produkt.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://duschbaby.de/">
+    <meta property="twitter:title" content="DuschBaby - Sicher duschen mit deinem Baby">
+    <meta property="twitter:description" content="Die sichere Lösung zum Duschen mit deinem Baby. Rutschfest, hautfreundlich und von Müttern entwickelt.">
+    <meta property="twitter:image" content="https://duschbaby.de/produkt.jpg">
     
     <!-- Preload Critical Images -->
     <link rel="preload" as="image" href="produkt.jpg" fetchpriority="high">
-    <link rel="preload" as="image" href="logo.png">
 
     <!-- Google Fonts - Optimized -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,9 +47,28 @@
             box-sizing: border-box;
         }
 
+        /* Selection styling for brand consistency */
+        ::selection {
+            background-color: #1a9b95;
+            color: white;
+        }
+
+        ::-moz-selection {
+            background-color: #1a9b95;
+            color: white;
+        }
+
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 80px;
+        }
+
+        /* Focus styles for accessibility */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #1a9b95;
+            outline-offset: 3px;
+            border-radius: 4px;
         }
 
         body {
@@ -188,14 +223,19 @@
             border-radius: 50px;
             font-weight: 600;
             font-size: 1.1rem;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 15px rgba(26, 155, 149, 0.3);
+            will-change: transform;
         }
 
         .cta:hover {
             background: #158882;
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(26, 155, 149, 0.4);
+        }
+
+        .cta:active {
+            transform: translateY(0);
         }
 
         .cta-secondary {
@@ -237,6 +277,11 @@
             gap: 0.5rem;
             font-size: 0.9rem;
             color: #5a6c7d;
+            transition: transform 0.2s ease;
+        }
+
+        .trust-badge:hover {
+            transform: translateX(3px);
         }
 
         .trust-badge::before {
@@ -244,6 +289,13 @@
             color: #1a9b95;
             font-weight: 700;
             font-size: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: rgba(26, 155, 149, 0.1);
+            border-radius: 50%;
         }
 
         /* Problem Section */
@@ -403,14 +455,19 @@
             background: #f0fffe;
             padding: 2rem;
             border-radius: 15px;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border: 2px solid transparent;
+            will-change: transform;
         }
 
         .feature:hover {
             transform: translateY(-5px);
             border-color: #1a9b95;
             box-shadow: 0 10px 30px rgba(26, 155, 149, 0.15);
+        }
+
+        .feature:active {
+            transform: translateY(-2px);
         }
 
         .feature-icon {
@@ -584,6 +641,17 @@
 
         .product-gallery img:hover {
             transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        /* Footer improvements */
+        footer a {
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #158882;
+            transform: translateY(-1px);
         }
 
         /* Responsive */
@@ -729,7 +797,17 @@
         }
 
         .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Smooth scroll for better UX */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            .fade-in-up {
+                animation: none;
+            }
         }
     </style>
     
@@ -802,7 +880,7 @@
             <h2>Das Produkt</h2>
 
             <div style="max-width: 700px; margin: 0 auto 2rem;">
-                <img src="produkt-shot-1.jpeg" alt="DuschBaby Duschhandschuh mit Nassbeutel" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" loading="lazy" decoding="async">
+                <img src="produkt-shot-1.jpeg" alt="DuschBaby Duschhandschuh mit Nassbeutel" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" loading="lazy" decoding="async" width="700" height="700">
             </div>
 
             <p style="text-align: center; font-size: 1.2rem; color: #5a6c7d; line-height: 1.8; max-width: 650px; margin: 0 auto 4rem;">
@@ -890,7 +968,7 @@
             <!-- Founders Grid -->
             <div class="founders-grid" style="margin-bottom: 3rem;">
                 <div>
-                    <img src="founder.jpeg" alt="Giulia und Lena - Die Gründerinnen von DuschBaby" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" loading="lazy" decoding="async">
+                    <img src="founder.jpeg" alt="Giulia und Lena - Die Gründerinnen von DuschBaby" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" loading="lazy" decoding="async" width="1000" height="1333">
                 </div>
                 <div>
                     <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 1.5rem;">
