@@ -320,6 +320,14 @@
             font-weight: 700;
         }
 
+        #problem p {
+            text-align: left;
+        }
+
+        #problem .centered-intro {
+            text-align: center;
+        }
+
         .problem-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -481,6 +489,20 @@
             margin-bottom: 0.8rem;
         }
 
+        .feature-icon.custom-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.8rem;
+            background: linear-gradient(135deg, #1a9b95 0%, #2cb5ad 100%);
+            border-radius: 50%;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(26, 155, 149, 0.3);
+        }
+
         .feature h3 {
             font-family: 'Quicksand', sans-serif;
             font-size: 1.3rem;
@@ -538,9 +560,9 @@
         .story-quote {
             font-family: 'Playfair Display', serif;
             background: linear-gradient(135deg, #ffffff 0%, #f8fdfd 100%);
-            padding: 3.5rem 4rem;
+            padding: 3.5rem 3rem;
             border-radius: 20px;
-            margin: 0;
+            margin: 0 1rem;
             border: 2px solid rgba(26, 155, 149, 0.15);
             position: relative;
             font-style: italic;
@@ -562,12 +584,12 @@
         .story-quote::before {
             content: '"';
             font-family: 'Playfair Display', serif;
-            font-size: 5rem;
+            font-size: 4rem;
             color: #1a9b95;
             opacity: 0.2;
             position: absolute;
-            top: -10px;
-            left: 20px;
+            top: 10px;
+            left: 15px;
             line-height: 1;
             font-weight: 700;
         }
@@ -575,12 +597,12 @@
         .story-quote::after {
             content: '"';
             font-family: 'Playfair Display', serif;
-            font-size: 5rem;
+            font-size: 4rem;
             color: #1a9b95;
             opacity: 0.2;
             position: absolute;
-            bottom: -30px;
-            right: 20px;
+            bottom: 10px;
+            right: 15px;
             line-height: 1;
             font-weight: 700;
         }
@@ -862,18 +884,19 @@
             .story-quote {
                 font-size: 1.25rem;
                 padding: 2.5rem 2rem;
+                margin: 0 0.5rem;
                 line-height: 1.7;
             }
 
             .story-quote::before {
-                font-size: 3.5rem;
-                top: -5px;
+                font-size: 3rem;
+                top: 10px;
                 left: 10px;
             }
 
             .story-quote::after {
-                font-size: 3.5rem;
-                bottom: -20px;
+                font-size: 3rem;
+                bottom: 10px;
                 right: 10px;
             }
 
@@ -998,11 +1021,11 @@
         <div class="section-content">
             <h2>Das Problem</h2>
 
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <p style="font-size: 1.3rem; color: #2d3748; line-height: 1.8; margin-bottom: 2.5rem; font-weight: 500;">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <p class="centered-intro" style="font-size: 1.3rem; color: #2d3748; line-height: 1.8; margin-bottom: 2.5rem; font-weight: 500; text-align: center;">
                     Nasse Haut, glitschige Arme...<br>jedes Elternteil kennt das unsichere Gefühl<br>beim Duschen mit dem Baby.
                 </p>
-                <p style="font-size: 1.15rem; color: #5a6c7d; line-height: 1.9; margin-bottom: 1.5rem;">
+                <p class="centered-intro" style="font-size: 1.15rem; color: #5a6c7d; line-height: 1.9; margin-bottom: 1.5rem; text-align: center;">
                     Egal ob nach dem Strandtag, beim Babyschwimmen<br>oder zuhause: <strong style="color: #1a9b95;">DuschBaby gibt dir den sicheren Halt</strong>,<br>den du brauchst – für entspannte Momente mit deinem Kind.
                 </p>
             </div>
@@ -1062,32 +1085,60 @@
 
             <div class="features-grid">
                 <div class="feature">
-                    <div class="feature-icon">🛡️</div>
+                    <div class="feature-icon custom-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
                     <h3>Rutschfest & sicher</h3>
                     <p>Perfekter Halt bei nasser Haut, sanft zur empfindlichen Babyhaut.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">✋</div>
+                    <div class="feature-icon custom-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
+                        </svg>
+                    </div>
                     <h3>Universelle Passform</h3>
                     <p>Passt sich jeder Handgröße an – für Mama, Papa und alle Betreuungspersonen.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">💙</div>
+                    <div class="feature-icon custom-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
                     <h3>Ergonomisch</h3>
                     <p>Komfortables Design für natürliches, sicheres Handling.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">💨</div>
+                    <div class="feature-icon custom-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                        </svg>
+                    </div>
                     <h3>Schnell trocknend</h3>
                     <p>Hygienisches Material, leicht zu reinigen und ideal für unterwegs.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">👶</div>
+                    <div class="feature-icon custom-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="5"/>
+                            <path d="M20 21a8 8 0 0 0-16 0"/>
+                        </svg>
+                    </div>
                     <h3>0-24 Monate</h3>
                     <p>Begleitet dich und dein Baby durch die ersten wichtigen Jahre.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">🎒</div>
+                    <div class="feature-icon custom-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6L9 17l-5-5"/>
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                        </svg>
+                    </div>
                     <h3>Mit Nassbeutel</h3>
                     <p>Hygienische Aufbewahrung für Urlaub, Schwimmbad oder Wickeltasche.</p>
                 </div>
@@ -1159,6 +1210,17 @@
                             </div>
                         </div>
 
+                        <!-- Diana -->
+                        <div class="testimonial-slide">
+                            <img src="diana.jpeg" alt="Diana" class="testimonial-image" loading="lazy" width="120" height="120">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">
+                                    "Ich bin durch Zufall auf den DuschBaby Handschuh gestoßen, als ich nach einem sinnvollen Geschenk zur Geburt gesucht habe. Der Handschuh ist so praktisch und hilfreich beim Waschen in der Wanne oder Dusche – das Baby rutscht beim Einseifen einfach nicht mehr weg! Nach dem Gebrauch kurz ausspülen, aufhängen, fertig. Super durchdacht und definitiv ein Geschenk, das wirklich genutzt wird. Werde ich auf jeden Fall noch öfter verschenken!"
+                                </p>
+                                <div class="testimonial-author">Diana, 44</div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -1169,6 +1231,7 @@
                     <button class="dot" onclick="goToSlide(2)" aria-label="Testimonial 3"></button>
                     <button class="dot" onclick="goToSlide(3)" aria-label="Testimonial 4"></button>
                     <button class="dot" onclick="goToSlide(4)" aria-label="Testimonial 5"></button>
+                    <button class="dot" onclick="goToSlide(5)" aria-label="Testimonial 6"></button>
                 </div>
             </div>
         </div>
@@ -1249,8 +1312,23 @@
     <!-- Testimonials Slider Script -->
     <script>
         let currentSlide = 0;
-        const totalSlides = 5;
+        const totalSlides = 6;
         let autoSlideInterval;
+
+        // Shuffle testimonials on page load
+        function shuffleTestimonials() {
+            const track = document.getElementById('testimonialTrack');
+            const slides = Array.from(track.children);
+
+            // Fisher-Yates shuffle algorithm
+            for (let i = slides.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [slides[i], slides[j]] = [slides[j], slides[i]];
+            }
+
+            // Re-append shuffled slides
+            slides.forEach(slide => track.appendChild(slide));
+        }
 
         function goToSlide(index) {
             currentSlide = index;
@@ -1287,6 +1365,7 @@
 
         // Start auto-slide when page loads
         document.addEventListener('DOMContentLoaded', function() {
+            shuffleTestimonials();
             startAutoSlide();
         });
 
