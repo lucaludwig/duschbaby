@@ -1332,7 +1332,7 @@
         // Track active section in navigation
         function updateActiveNavLink() {
             const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            const navLinks = document.querySelectorAll('nav ul a[href^="#"]');
 
             let currentSection = '';
             const scrollPosition = window.scrollY + 200; // Offset for better UX
