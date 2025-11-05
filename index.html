@@ -138,6 +138,12 @@
             background: rgba(26, 155, 149, 0.08);
         }
 
+        nav a.active {
+            color: #1a9b95;
+            background: rgba(26, 155, 149, 0.15);
+            font-weight: 600;
+        }
+
         nav .cta-nav {
             background: #1a9b95;
             color: white !important;
@@ -147,6 +153,11 @@
         }
 
         nav .cta-nav:hover {
+            background: #158882;
+            color: white !important;
+        }
+
+        nav .cta-nav.active {
             background: #158882;
             color: white !important;
         }
@@ -1315,6 +1326,41 @@
             </div>
         </div>
     </footer>
+
+    <!-- Navigation Active State Script -->
+    <script>
+        // Track active section in navigation
+        function updateActiveNavLink() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+            let currentSection = '';
+            const scrollPosition = window.scrollY + 200; // Offset for better UX
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Update on scroll
+        window.addEventListener('scroll', updateActiveNavLink);
+
+        // Update on page load
+        document.addEventListener('DOMContentLoaded', updateActiveNavLink);
+    </script>
 
     <!-- Testimonials Slider Script -->
     <script>
