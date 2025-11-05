@@ -79,6 +79,8 @@
             position: relative;
             width: 100%;
             -webkit-overflow-scrolling: touch;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         /* Fixed Navigation */
@@ -165,7 +167,9 @@
         }
 
         section h2 {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3.5rem;
+            letter-spacing: -0.015em;
+            line-height: 1.3;
         }
 
         section p {
@@ -192,19 +196,21 @@
             font-family: 'Quicksand', sans-serif;
             font-size: 3.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             color: #1a9b95;
-            letter-spacing: -0.5px;
-            line-height: 1.2;
+            letter-spacing: -0.01em;
+            line-height: 1.15;
         }
 
         .hero-content .tagline {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
             color: #5a6c7d;
-            font-weight: 300;
-            margin-bottom: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            margin-bottom: 2rem;
             line-height: 1.4;
+            letter-spacing: 0.005em;
         }
 
         .hero-cta-group {
@@ -308,7 +314,7 @@
         #problem h2 {
             font-family: 'Quicksand', sans-serif;
             font-size: 2.8rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             color: #2d3748;
             text-align: center;
             font-weight: 700;
@@ -481,12 +487,15 @@
             margin-bottom: 0.8rem;
             color: #2d3748;
             font-weight: 600;
+            letter-spacing: 0.01em;
         }
 
         .feature p {
+            font-family: 'Inter', sans-serif;
             font-size: 1rem;
             color: #5a6c7d;
-            line-height: 1.7;
+            line-height: 1.8;
+            font-weight: 400;
         }
 
         /* Story Section */
@@ -529,18 +538,19 @@
         .story-quote {
             font-family: 'Playfair Display', serif;
             background: linear-gradient(135deg, #ffffff 0%, #f8fdfd 100%);
-            padding: 3rem 3.5rem;
+            padding: 3.5rem 4rem;
             border-radius: 20px;
             margin: 0;
             border: 2px solid rgba(26, 155, 149, 0.15);
             position: relative;
             font-style: italic;
-            font-size: 1.6rem;
+            font-size: 1.65rem;
             color: #2d3748;
             box-shadow: 0 12px 35px rgba(26, 155, 149, 0.12);
-            line-height: 1.8;
+            line-height: 1.7;
             font-weight: 500;
             text-align: center;
+            letter-spacing: 0.005em;
         }
 
         .story-quote br {
@@ -700,24 +710,24 @@
         }
 
         .testimonial-text {
+            font-family: 'Inter', sans-serif;
             font-size: 1.15rem;
-            line-height: 1.8;
+            line-height: 1.9;
             color: #2d3748;
             margin-bottom: 1.5rem;
-            font-style: italic;
+            font-weight: 400;
+            letter-spacing: 0.01em;
         }
 
         .testimonial-author {
-            font-weight: 600;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
             color: #1a9b95;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             margin-bottom: 0.3rem;
+            letter-spacing: 0.02em;
         }
 
-        .testimonial-role {
-            font-size: 0.95rem;
-            color: #5a6c7d;
-        }
 
         /* Slider dots */
         .testimonial-dots {
@@ -790,7 +800,8 @@
             }
 
             .hero-content .tagline {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
+                line-height: 1.6;
             }
 
             .hero-content p {
@@ -961,7 +972,10 @@
                 <h1>Sicher. Sanft. DuschBaby.</h1>
                 <p class="tagline">Mit viel Liebe und Geborgenheit</p>
                 <p style="font-size: 1.25rem; color: #5a6c7d; margin-bottom: 2rem; line-height: 1.7; font-weight: 400;">
-                    Erlebe das sichere Gefühl, dein Baby beim Duschen fest in den Armen zu halten. <strong style="color: #1a9b95;">Sicher. Praktisch. Liebevoll.</strong>
+                    Erlebe das sichere Gefühl, dein Baby beim Duschen<br>fest in den Armen zu halten.
+                </p>
+                <p style="font-size: 1.1rem; color: #1a9b95; margin-bottom: 2.5rem; font-weight: 600;">
+                    Sicher. Praktisch. Liebevoll.
                 </p>
 
                 <div class="hero-cta-group">
@@ -988,11 +1002,11 @@
             <h2>Das Problem</h2>
 
             <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <p style="font-size: 1.3rem; color: #2d3748; line-height: 1.8; margin-bottom: 2rem; font-weight: 500;">
-                    Nasse Haut, glitschige Arme – jedes Elternteil kennt das unsichere Gefühl beim Duschen mit dem Baby.
+                <p style="font-size: 1.3rem; color: #2d3748; line-height: 1.8; margin-bottom: 2.5rem; font-weight: 500;">
+                    Nasse Haut, glitschige Arme...<br>jedes Elternteil kennt das unsichere Gefühl<br>beim Duschen mit dem Baby.
                 </p>
-                <p style="font-size: 1.15rem; color: #5a6c7d; line-height: 1.8; margin-bottom: 1.5rem;">
-                    Egal ob nach dem Strandtag, beim Babyschwimmen oder zuhause: <strong style="color: #1a9b95;">DuschBaby gibt dir den sicheren Halt</strong>, den du brauchst – für entspannte Momente mit deinem Kind.
+                <p style="font-size: 1.15rem; color: #5a6c7d; line-height: 1.9; margin-bottom: 1.5rem;">
+                    Egal ob nach dem Strandtag, beim Babyschwimmen<br>oder zuhause: <strong style="color: #1a9b95;">DuschBaby gibt dir den sicheren Halt</strong>,<br>den du brauchst – für entspannte Momente mit deinem Kind.
                 </p>
             </div>
         </div>
@@ -1021,7 +1035,7 @@
             </div>
 
             <p class="video-description">
-                <strong>Kein Rutschen, kein Stress</strong> – nur entspannte Momente mit deinem Baby.
+                <strong>Kein Rutschen, kein Stress.</strong> Nur entspannte Momente mit deinem Baby.
             </p>
         </div>
     </section>
@@ -1034,11 +1048,11 @@
 
                 <div class="solution-highlight">
                     <h3>Sicherer Halt durch innovatives Design</h3>
-                    <p style="font-size: 1.15rem; line-height: 1.8;">Rutschfest, hautfreundlich und schnell trocknend – DuschBaby sorgt für entspannte Duschmomente mit deinem Baby.</p>
+                    <p style="font-size: 1.15rem; line-height: 1.9;">Rutschfest, hautfreundlich und schnell trocknend.<br>DuschBaby sorgt für entspannte Duschmomente<br>mit deinem Baby.</p>
                 </div>
 
-                <p style="font-size: 1.15rem; color: #5a6c7d; line-height: 1.8; margin-top: 2rem;">
-                    Egal ob zuhause, im Urlaub oder nach dem Babyschwimmen – dein verlässlicher Begleiter für unbeschwerte Momente voller Vertrauen und Nähe.
+                <p style="font-size: 1.15rem; color: #5a6c7d; line-height: 1.9; margin-top: 2.5rem;">
+                    Egal ob zuhause, im Urlaub oder nach dem Babyschwimmen – dein verlässlicher Begleiter für unbeschwerte Momente<br>voller Vertrauen und Nähe.
                 </p>
             </div>
         </div>
@@ -1053,7 +1067,7 @@
                 <div class="feature">
                     <div class="feature-icon">🛡️</div>
                     <h3>Rutschfest & sicher</h3>
-                    <p>Perfekter Halt bei nasser Haut – sanft zur empfindlichen Babyhaut.</p>
+                    <p>Perfekter Halt bei nasser Haut, sanft zur empfindlichen Babyhaut.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">✋</div>
@@ -1068,7 +1082,7 @@
                 <div class="feature">
                     <div class="feature-icon">💨</div>
                     <h3>Schnell trocknend</h3>
-                    <p>Hygienisches Material – leicht zu reinigen und ideal für unterwegs.</p>
+                    <p>Hygienisches Material, leicht zu reinigen und ideal für unterwegs.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">👶</div>
@@ -1098,10 +1112,9 @@
                             <img src="jana.jpeg" alt="Jana" class="testimonial-image" loading="lazy" width="120" height="120">
                             <div class="testimonial-content">
                                 <p class="testimonial-text">
-                                    "Der DuschBaby Handschuh ist super praktisch und gibt mir beim Duschen mit meinem Kind ein richtig sicheres Gefühl. Das Material ist angenehm weich, aber trotzdem griffig. Mein Baby rutscht mir nicht mehr so leicht weg. Die Passform ist auch klasse, sitzt gut an der Hand und trocknet nach dem Gebrauch schnell. Für mich eine echte Erleichterung im Alltag!"
+                                    "Der DuschBaby Handschuh ist super praktisch und gibt mir beim Duschen mit meinem Kind ein richtig sicheres Gefühl. Das Material ist angenehm weich, aber trotzdem griffig, mein Baby rutscht mir nicht mehr so leicht weg. Auch die Passform ist klasse, der Handschuh sitzt gut an der Hand und lässt sich nach dem Gebrauch schnell trocknen. Eine echte Erleichterung im Alltag!"
                                 </p>
                                 <div class="testimonial-author">Jana, 34</div>
-                                <div class="testimonial-role">Mama aus München</div>
                             </div>
                         </div>
 
@@ -1110,10 +1123,9 @@
                             <img src="teresa.jpeg" alt="Teresa" class="testimonial-image" loading="lazy" width="120" height="120">
                             <div class="testimonial-content">
                                 <p class="testimonial-text">
-                                    "Mein Kind hasst Baden und will nur Duschen. Das war früher immer ein kleines Abenteuer! Mit dem DuschBaby ist das jetzt total entspannt. Ich habe endlich ein sicheres Gefühl, der Handschuh ist schön soft, aber super rutschfest. Mein Kind rutscht mir nicht mehr weg. Eine echte Erleichterung, die mich so entspannen lässt, zu Hause und unterwegs."
+                                    "Mein Kind hasst Baden und will nur Duschen, das war früher immer ein kleines Abenteuer! Mit dem DuschBaby ist das jetzt total entspannt. Ich habe endlich ein sicheres Gefühl, der Handschuh ist schön soft aber super rutschfest, und mein Kind rutscht mir nicht mehr weg. Eine echte Erleichterung im Alltag die mich so entspannen lässt, zu Hause und unterwegs."
                                 </p>
                                 <div class="testimonial-author">Teresa, 36</div>
-                                <div class="testimonial-role">Mama aus Hamburg</div>
                             </div>
                         </div>
 
@@ -1122,10 +1134,9 @@
                             <img src="max.jpeg" alt="Max" class="testimonial-image" loading="lazy" width="120" height="120">
                             <div class="testimonial-content">
                                 <p class="testimonial-text">
-                                    "Bei uns zu Hause ist das Bad leider echt klein. Baden ist da keine Option 😅. Deshalb ist das DuschBaby sowohl zu Hause als auch unterwegs ständig im Einsatz! 💦"
+                                    "Bei uns zu Hause ist das Bad leider echt klein, Baden ist da keine Option 😅 Deshalb ist das DuschBaby sowohl zu Hause als auch unterwegs ständig im Einsatz! 💦"
                                 </p>
                                 <div class="testimonial-author">Max, 35</div>
-                                <div class="testimonial-role">Papa aus Berlin</div>
                             </div>
                         </div>
 
@@ -1134,10 +1145,9 @@
                             <img src="nadine.jpeg" alt="Nadine" class="testimonial-image" loading="lazy" width="120" height="120">
                             <div class="testimonial-content">
                                 <p class="testimonial-text">
-                                    "Baden ist für mein Baby der absolute Horror, aber beim Duschen hatte ich einfach immer Angst, dass er mir aus der Hand rutscht. Dank DuschBaby habe ich endlich eine Lösung, mein Baby bedürfnisorientiert und vor allem sicher zu pflegen. Ich liebe es!"
+                                    "Baden ist für mein Baby der absolute Horror, aber beim Duschen hatte ich einfach immer Angst dass er mir aus der Hand rutscht. Dank DuschBaby habe ich endlich eine Lösung mein Baby bedürfnisorientiert und vor allem sicher zu pflegen. Ich liebe es."
                                 </p>
                                 <div class="testimonial-author">Nadine, 38</div>
-                                <div class="testimonial-role">Mama aus Köln</div>
                             </div>
                         </div>
 
@@ -1146,10 +1156,9 @@
                             <img src="lukas.jpeg" alt="Lukas" class="testimonial-image" loading="lazy" width="120" height="120">
                             <div class="testimonial-content">
                                 <p class="testimonial-text">
-                                    "Mit zwei kleinen Kindern unterwegs zu sein heißt: praktisch muss es sein! Unser DuschBaby ist immer dabei. Leicht, kompakt, sicher und perfekt, wenn es mal keine Badewanne gibt."
+                                    "Mit zwei kleinen Kindern unterwegs zu sein heißt: praktisch muss es sein! Unser DuschBaby ist immer dabei. Leicht, kompakt, sicher und perfekt wenn es mal keine Badewanne gibt."
                                 </p>
                                 <div class="testimonial-author">Lukas, 38</div>
-                                <div class="testimonial-role">Papa aus Frankfurt</div>
                             </div>
                         </div>
 
@@ -1179,10 +1188,10 @@
                     <img src="founder.jpeg" alt="Giulia und Lena - Die Gründerinnen von DuschBaby" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" loading="lazy" decoding="async" width="1000" height="1333">
                 </div>
                 <div>
-                    <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                        Wir sind <strong style="color: #1a9b95;">Giulia und Lena</strong> – zwei Mütter, die aus eigener Erfahrung wissen, wie herausfordernd der Alltag mit Baby sein kann.
+                    <p style="font-size: 1.2rem; line-height: 1.9; margin-bottom: 2rem;">
+                        Wir sind <strong style="color: #1a9b95;">Giulia und Lena</strong> – zwei Mütter die aus eigener Erfahrung wissen<br>wie herausfordernd der Alltag mit Baby sein kann.
                     </p>
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #5a6c7d;">
+                    <p style="font-size: 1.1rem; line-height: 1.9; color: #5a6c7d;">
                         Deshalb haben wir DuschBaby entwickelt – eine praktische Lösung für ein alltägliches Problem.
                     </p>
                 </div>
@@ -1192,20 +1201,20 @@
             <div class="story-content">
                 <div style="max-width: 750px; margin: 0 auto;">
 
-                    <p style="font-size: 1.1rem; line-height: 1.9; margin-bottom: 2.5rem; color: #5a6c7d; text-align: center;">
-                        Giulias Sohn leidet unter Neurodermitis und muss nach dem Baden im Chlor- oder Salzwasser gründlich abgeduscht werden. Die Frage war: <em style="color: #2d3748;">"Wie kann ich mein Kind sicher in der Dusche halten, ohne dass etwas passiert?"</em>
+                    <p style="font-size: 1.1rem; line-height: 2; margin-bottom: 2.5rem; color: #5a6c7d; text-align: center;">
+                        Giulias Sohn leidet unter Neurodermitis und muss nach dem Baden<br>im Chlor- oder Salzwasser gründlich abgeduscht werden.<br>Die Frage war: <em style="color: #2d3748;">"Wie kann ich mein Kind sicher<br>in der Dusche halten, ohne dass etwas passiert?"</em>
                     </p>
 
-                    <p style="font-size: 1.1rem; line-height: 1.9; margin-bottom: 3rem; color: #5a6c7d; text-align: center;">
-                        Während es unzählige Hilfsmittel für die Badewanne gibt, fehlte eine sichere Lösung für die Dusche. Also wurden wir selbst aktiv.
+                    <p style="font-size: 1.1rem; line-height: 2; margin-bottom: 3.5rem; color: #5a6c7d; text-align: center;">
+                        Während es unzählige Hilfsmittel für die Badewanne gibt,<br>fehlte eine sichere Lösung für die Dusche.<br>Also wurden wir selbst aktiv.
                     </p>
 
                     <div class="story-quote" style="margin: 3rem auto;">
                         Die Idee zu DuschBaby entstand aus einem persönlichen Bedürfnis.
                     </div>
 
-                    <p style="font-size: 1.25rem; margin-top: 3rem; line-height: 1.9; text-align: center; color: #1a9b95; font-weight: 600; padding: 2rem; background: rgba(26, 155, 149, 0.05); border-radius: 15px;">
-                        Aus einem kleinen Problem im Familienurlaub wurde unsere Herzensidee – und heute sind wir stolz, sie mit euch zu teilen.
+                    <p style="font-size: 1.25rem; margin-top: 3rem; line-height: 2; text-align: center; color: #1a9b95; font-weight: 600; padding: 2.5rem 2rem; background: rgba(26, 155, 149, 0.05); border-radius: 15px;">
+                        Aus einem kleinen Problem im Familienurlaub<br>wurde unsere Herzensidee – und heute sind wir stolz<br>sie mit euch zu teilen.
                     </p>
                 </div>
             </div>
