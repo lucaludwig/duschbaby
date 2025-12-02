@@ -551,12 +551,21 @@
         }
 
         .founders-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
             align-items: center;
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
+        }
+
+        .founders-grid > div:first-child {
+            width: 100%;
+        }
+
+        .founders-grid > div:last-child {
+            width: 100%;
+            text-align: center;
         }
 
         .story-content {
@@ -1308,7 +1317,7 @@
             <!-- Founders Grid -->
             <div class="founders-grid" style="margin-bottom: 3rem;">
                 <div>
-                    <img src="founder.jpeg" alt="Giulia und Lena - Die Gründerinnen von DuschBaby" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" loading="lazy" decoding="async" width="1000" height="1333">
+                    <img src="founder.jpeg" alt="Giulia und Lena - Die Gründerinnen von DuschBaby" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" loading="lazy" decoding="async" width="1600" height="900">
                 </div>
                 <div>
                     <p style="font-size: 1.2rem; line-height: 1.9; margin-bottom: 2rem;">
